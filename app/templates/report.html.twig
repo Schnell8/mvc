@@ -1,0 +1,59 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Report{% endblock %}
+
+{% block main %}
+    <h1>Report</h1>
+
+    <article>
+        <section>
+            <h3 id="kmom01">Kmom01</h3>
+
+            <li class="question">Berätta kort om dina förkunskaper och tidigare erfarenheter kring objektorientering.</li>
+            <p>Tidigare har jag lärt mig om objektorientering i Python, jag har ännu inte avslutat kursen men har som förhoppning att göra det snart. Jag känner att jag lärt mig grunderna till att förstå objektorientering. Kort och gott så skapas objektet utifrån klasser där klasserna fungerar som en slags mall för uppbyggnaden av objektet. Objektets attribut sitter inne på lagringen och det vi kan göra med objektet sker i dess metoder.</p>
+
+            <li class="question">Berätta kort om PHPs modell för klasser och objekt. Vilka är de grunder man behöver veta/förstå för att kunna komma igång och skapa sina första klasser?</li>
+            <p>PHPs modell bygger på samma princip att utifrån klasser skapa objekt. Inuti klassen sätter man sina properties och funktioner, dessa kallas för medlemsvariabler och metoder. Mer än så behöver man egentligen inte veta. I korta enkla steg blir det att skapa en klass, bestäm medlemsvariabler och metoder. Skapa objektet utifrån klassen för att sen kunna sätta värde på medlemsvariablerna och kalla på dess metoder. Ett smidigt sätt att referera till nuvarande objekt är att använda variablen $this. Den använder man i metoder för att referera till det objekt som anropade metoden.</p>
+
+            <li class="question">Reflektera kort över den kodbas, koden, strukturen som användes till uppgiften me/report, hur uppfattar du den?</li>
+            <p>Via en controller skapar vi en klass som skapar routes vars metod renderar en utvald template-fil. Beroende på vilken route vi befinner oss på returneras den utvalda template-filen, våra vyer. Jag tycker alltid det är skönt när man kan ha koden uppdelad på olika ställen, det skapar bättre flöde när jag tänker mig genom koden och ger också bättre förståelse. I controllern kan vi sätta upp våra olika klasser som gör sitt och i våra vyer utgår vi från en bas-fil som vi kan bygga på beroende på vilken route vi är inne i.</p>
+
+            <li class="question">Med tanke på artikeln “PHP The Right Way”, vilka delar in den finner du extra intressanta och värdefulla? Är det några särskilda områden som du känner att du vill veta mer om? Lyft fram några delar av artikeln som du känner mer värdefulla.</li>
+            <p>Att kunna testa sin kod är en otroligt viktig del i utvecklingen av applikationer. Man måste vara säker på att det fungerar som det ska annars kan det bli stora problem i framtiden. Dokumentering inom programmering vill jag också lyfta fram, det kan kännas tråkigt men ack så viktigt. Jag kan känna att jag har stenkoll på min kod och förstår den till fullo men tänk om jag behöver dela med mig av koden. Hur ska nästa person kunna förstå? Dokumentering detta arbete väsentligt. I den kan jag förklara koden på ett mer förståeligt sätt.</p>
+            <p>Jag tycker det verkar intressant med delen om säkerhet. Allt har blivit så tillgängligt nu och varje gång vi är ute på nätet är vi exponerade för eventuella attacker. Jag kan läsa mig till att PHP erbjuder olika sätt att ”försvara” sig. Det hade varit intressant att veta mer om hur pass säker man egentligen är.</p>
+
+            <li class="question">Vilken är din TIL för detta kmom?</li>
+            <p>Mitt TIL för detta kursmoment är att ha lärt mig grunden till att sätta upp en webbsida i Symfony. Jag tycker ramverket har en schysst struktur och det är lätt att jobba i. Ser fram emot att utveckla mina kunskaper i kommande utmaningar.</p>
+        </section>
+
+        <section>
+            <h3 id="kmom02">Kmom02</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+
+        <section>
+            <h3 id="kmom03">Kmom03</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+
+        <section>
+            <h3 id="kmom04">Kmom04</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+
+        <section>
+            <h3 id="kmom05">Kmom05</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+
+        <section>
+            <h3 id="kmom06">Kmom06</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+
+        <section>
+            <h3 id="kmom07-10">Kmom07-10</h3>
+            <p>Här är redovisningstexten</p>
+        </section>
+    </article>
+{% endblock %}

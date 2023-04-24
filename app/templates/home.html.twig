@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+    <h1>Home</h1>
+
+    <h3>Om mig</h3>
+
+    <p>Mitt namn är Christopher Schnell. Jag är 27 år gammal, född och uppvuxen i Ystad, Skåne, där jag fortfarande bor tillsammans med min sambo.</p>
+    <p>I hela mitt liv har jag sysslat med någon typ av sport och intresset för datorer har alltid funnits där.</p>
+    <p>Idag spelar jag handboll på elitnivå och tidigare jobbade jag under 6 år på skola. Jag vantrivdes på jobbet och möjligheten att studera programmering dök upp. Jag tog chansen och här är jag nu, supertaggad!</p>
+    <p>Ha det gott!</p>
+
+    <a href="{{ asset('img/bild_pa_mig.png') }}">
+        <img class="img-me" src="{{ asset('img/bild_pa_mig.png') }}" alt="bild">
+    </a>
+{% endblock %}

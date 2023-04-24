@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+    <h1>About</h1>
+
+    <div class="main-about">
+        <div class="kurs-about">
+            <h3>Om kurs</h3>
+            <p>Kursen inleds med att bygga upp en webbplats i ramverket Symfony där C:et och V:et i MVC tas upp. Nästa steg är att träna på objektorientering där man skapar egna klasser och applikationer. Dessa klasser ska givetvis enhetstestas, närmare bestämt med verktyget PHPUnit. Man kommer att få träna på att använda ORM som kopplar ramverktet till en databas. Vid slutet av kursen tränar man på att automtisera sina tester och kodkvalitet tas upp. Tillsist är det dags att visa vad man lärt sig under kursen gång och sammanställa allt detta i ett projekt.</p>
+        </div>
+
+
+        <div class="syfte-about">
+            <h3>Syfte</h3>
+            <p>Syftet är att vi i slutet av kursen ska kunna självständigt utveckla och få igång en webbapplikation där objektorienterad programmering i ramverk tillsammans med databaser står i centrum.</p>
+        </div>
+
+
+        <div class="picture-about">
+            <a href="{{ asset('img/mvc.jpg') }}">
+                <img class="img-about" src="{{ asset('img/mvc.jpg') }}" alt="mvc">
+            </a>
+        </div>
+    </div>
+
+
+{% endblock %}

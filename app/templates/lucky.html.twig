@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block main %}
+    <h1>Lucky</h1>
+
+    {% if number > 50 %}
+    <p class="h3-dog">Ditt "lucky" nummer är: {{ number }}</p>
+
+    <a href="{{ asset('img/hund.jpg') }}">
+        <img class="img-dog" src="{{ asset('img/hund.jpg') }}" alt="hund">
+    </a>
+    {% else %}
+    <p class="h3-cat">Ditt "lucky" nummer är: {{ number }}</p>
+
+    <a href="{{ asset('img/katt.jpg') }}">
+        <img class="img-cat" src="{{ asset('img/katt.jpg') }}" alt="katt">
+    </a>
+    {% endif %}
+{% endblock %}
