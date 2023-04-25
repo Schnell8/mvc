@@ -44,7 +44,6 @@ class LuckyControllerTwig extends AbstractController
     {
         $quotes = array("You are braver than you believe, and stronger than you seem, and smarter than you think.", "Positive anything is better than negative nothing.", "It is not whether you get knocked down, it is whether you get up.");
         $number = random_int(0, 2);
-        date_default_timezone_set("Europe/Stockholm");
         $t = time();
         $date = date("Y-m-d", $t);
         $curr_time = date("H:i:s ", $t);
