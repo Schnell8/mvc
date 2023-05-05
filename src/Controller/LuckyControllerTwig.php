@@ -53,7 +53,7 @@ class LuckyControllerTwig extends AbstractController
             'dagens datum' => $date,
             'tidsstampel' => $curr_time
         ];
-    
+
         $response = new JsonResponse($data);
         $response->setEncodingOptions(
             $response->getEncodingOptions() | JSON_PRETTY_PRINT

@@ -99,3 +99,16 @@ h1 {
 .question {
     font-weight: bold;
 }
+
+.red-card {
+    display: contents;
+    font-size: 10em;
+    color: red;
+    list-style: none;
+}
+
+.black-card {
+    display: contents;
+    font-size: 10em;
+    list-style: none;
+}

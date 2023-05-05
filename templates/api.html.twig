@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block title %}API{% endblock %}
+
+{% block main %}
+    <h1>API</h1>
+
+
+
+        <h2>/quote</h2>
+        <p>Denna route slumpar fram ett av tre möjliga citat, skriver ut dagens datum samt en tidsstämpel för när användaren gått in på routen.</p>
+        <li><a href="{{ path('api_quote') }}">quote</a></li>
+    
+    <form method="get" action="">
+        <h2>/deck</h2>
+        <p>Visar samtliga kort i kortleken, sorterade på färg och värde.</p>
+        <input type="submit" name="restart" value="Deck"
+            onClick="this.form.action='{{ path('api_deck') }}';">
+    </form>
+
+    <form method="post" action="">
+        <h2>/deck/shuffle</h2>
+        <p>Visar samtliga kort i kortleken i slumpad ordning.</p>
+        <input type="submit" name="shuffle" value="Shuffle"
+            onClick="this.form.action='{{ path('api_deck_shuffle') }}';">
+
+        <h2>/deck/draw</h2>
+        <p>Drar ett kort ur kortleken och visar antalet kort som finns kvar i kortleken.</p>
+        <input type="submit" name="draw" value="Draw"
+            onClick="this.form.action='{{ path('api_deck_draw') }}';">
+
+        <h2>/deck/draw/:number</h2>
+        <p>Drar ett kort ur kortleken där användaren själv kan ändra i urlen för att dra önskat antal kort. Visar antalet kort som finns kvar i kortleken.</p>
+        <input type="submit" name="number" value="Draw number"
+            onClick="this.form.action='{{ path('api_deck_draw_number', {num: 1}) }}';">
+    </form>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card Deck Shuffle{% endblock %}
+
+{% block main %}
+    <h1>Card Deck Shuffle</h1>
+
+    <ul>
+    {% for card in shuffled_deck %}
+        {% if card is same as('🂱') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂲') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂳') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂴') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂵') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂶') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂷') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂸') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂹') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂺') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂼') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂽') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🂾') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃁') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃂') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃃') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃄') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃅') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃆') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃇') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃈') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃉') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃊') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃌') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃍') %}
+            <li class="red-card">{{ card }}</li>
+        {% elseif card is same as('🃎') %}
+            <li class="red-card">{{ card }}</li>
+        {% else %}
+            <li class="black-card">{{ card }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}
