@@ -2,9 +2,6 @@
 
 namespace App\Card;
 
-use App\Card\Card;
-use phpDocumentor\Reflection\PseudoTypes\True_;
-
 class DeckOfCards
 {
     private $deck = [];

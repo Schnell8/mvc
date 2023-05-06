@@ -5,12 +5,15 @@
 {% block main %}
     <h1>Card</h1>
 
-    <p>På din landdningssida, berätta kort om strukturen på dina klasser, vilka klasser har du och hur är de relaterade till varandra.</p>
-    <p>Rita ett UML klass diagram och visa i sidan.</p>
-
     <li><a href="{{ path('deck') }}">Card Deck</a></li>
     <li><a href="{{ path('shuffle') }}">Card Deck Shuffle</a></li>
     <li><a href="{{ path('draw') }}">Card Deck Draw</a></li>
     <li><a href="{{ path('number', {num: 1}) }}">Card Deck Draw Number</a></li>
+
+    <p>Jag har fyra klasser, Card, CardGraphic, CardHand och DeckOfCards. Card klassen blir som en "basklass", det är från den CardGraphic ärver. Extends get en liten förklaring för vad som händer, den utökar klassen.</p>
+    <p>De andra två klasserna, CardHand och DeckOfCards, är aggregationer där båda klasserna har kort men korten kan "leva" utanför klasserna. Deras koppling är svag tillskillnad från kompsition där kopplingen är stark.</p>
+    <a href="{{ asset('img/uml.png') }}">
+        <img class="img-uml" src="{{ asset('img/uml.png') }}" alt="uml">
+    </a>
 
 {% endblock %}
