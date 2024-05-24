@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Doc{% endblock %}
+
+{% block main %}
+    <div class="doc">
+        <h1>Doc</h1>
+
+        <div>
+            <p>Jag kommer använda mig av klasserna "Game", "Player", "Bank", "Deck" och "Card". "Game" sköter hanteringen av spelet och se till att det flyter rätt.
+                "Player" innehåller spelarens hand och totalpoäng. Precis på samma sätt ser "Bank" klassen ut. "Deck" representerar kortleken och "Card" varje enskilt kort.
+                Nedan finns en bild på mitt flödesschema och en pseudokod för hur jag tänkt lösa en viss del i spelet.
+            </p>
+        </div>
+
+        <div class="flowchart">
+            <h3>Flowchart</h3>
+            <a href="{{ asset('img/mvc_flowchart.png') }}">
+                <img class="img-flowchart" src="{{ asset('img/mvc_flowchart.png') }}" alt="flowchart">
+            </a>
+        </div>
+
+        <div class="pseudo">
+            <h3>Pseudo</h3>
+            <a href="{{ asset('img/pseudo.png') }}">
+                <img class="img-pseudo" src="{{ asset('img/pseudo.png') }}" alt="pseudo">
+            </a>
+        </div>
+    </div>
+{% endblock %}

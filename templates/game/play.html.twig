@@ -1,0 +1,64 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Play{% endblock %}
+
+{% block main %}
+    <div class="main-play">
+        <div class="hand">
+            <h3>Player's hand</h3>
+            <ul>
+                {% for card in playerHand %}
+                    {% set lastChar = card|slice(-1) %}
+                    {% if lastChar is same as('♠') %}
+                        <li>{{ card }}</li>
+                    {% elseif lastChar is same as('♣') %}
+                        <li>{{ card }}</li>
+                    {% else %}
+                        <li class="red">{{ card }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            {% if playerHandValue > 21 %}
+                <h4>Total: {{ playerHandValue }} (Bust)</h4>
+            {% else %}
+                <h4>Total: {{ playerHandValue }}</h4>
+            {% endif %}
+        </div>
+
+        <div class="hand">
+            <h3>Bank's hand</h3>
+            <ul>
+                {% for card in bankHand %}
+                    {% set lastChar = card|slice(-1) %}
+                    {% if lastChar is same as('♠') %}
+                        <li>{{ card }}</li>
+                    {% elseif lastChar is same as('♣') %}
+                        <li>{{ card }}</li>
+                    {% else %}
+                        <li class="red">{{ card }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            {% if bankHandValue > 21 %}
+                <h4>Total: {{ bankHandValue }} (Bust)</h4>
+            {% else %}
+                <h4>Total: {{ bankHandValue }}</h4>
+            {% endif %}
+        </div>
+
+        <div class="bottom">
+        {% if bankHandValue > 0 %}
+            <h3>Result: {{ gameResult }}</h3>
+            <p>Play again?</p>
+            <a href="{{ path('init') }}">Yes</a>
+            <a href="{{ path('game') }}">No</a>
+        {% else %}
+            <a href="{{ path('draw_card') }}">Draw</a>
+            <a href="{{ path('stay') }}">Stay</a>
+        {% endif %}
+        </div>
+    </div>
+
+
+
+{% endblock %}

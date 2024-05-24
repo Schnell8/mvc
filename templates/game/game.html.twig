@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card{% endblock %}
+
+{% block main %}
+    
+    <h1>Game</h1>
+
+    <div>
+        <h3>Info</h3>
+        <p>This card game is called 21. It's played between two parts, the player(you) and the bank(computer).
+            The goal is to beat the bank by having a higher total value without exceeding 21.
+            The game starts off with you recieving a card.
+            Now you have two options, either you draw another card or you stay.
+            If you choose to stay the turn goes over to the bank.
+            The bank is not as smart as you and will always draw another card while the total value is below 17.
+            When the bank is done it's time to determine the winner.
+            If both exceed 21 it's a tie, otherwise the highest value wins but remember the bank always wins if values are the same!
+        </p>
+    </div>
+
+    <div>
+        <h3>Game review</h3>
+        <ul>
+            <li>(1) Player recieves one card</li>
+            <li>(2) Player choose to draw or stay</li>
+            <li>(2.1) Draw</li>
+            <p>- Player recieve another card --> (2)</p>
+            <p>- If player exceeds 21 --> (3)</p>
+            <li>(2.2) Stay</li>
+            <p>- Player holds cards --> (3)</p>
+            <li>(3) Bank's turn</li>
+            <p>- Bank draw card</p>
+            <p>- If below 17 --> (3)</p>
+            <p>- If above 17 --> (4)</p>
+            <li>(4) Determine winner</li>
+            <p>- Show result for round</p>
+        </ul>
+    </div>
+
+    <div>
+        <a href="{{ path('doc') }}" class="button">Doc</a>
+        <a href="{{ path('init') }}" class="button">Play game</a>
+    </div>
+{% endblock %}

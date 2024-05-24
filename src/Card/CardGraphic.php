@@ -4,7 +4,10 @@ namespace App\Card;
 
 class CardGraphic extends Card
 {
-    private $representation = [
+    /**
+     * @var string[] Array of Card objects
+     */
+    private array $representation = [
         1 => '🂱',
         2 => '🂲',
         3 => '🂳',
@@ -64,27 +67,8 @@ class CardGraphic extends Card
         parent::__construct();
     }
 
-    public static function cards()
-    {
-        $values = array('2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A');
-        $suits  = array('S', 'H', 'D', 'C');
-
-        $cards = array();
-        foreach ($suits as $suit) {
-            foreach ($values as $value) {
-                $cards[] = $value . $suit;
-            }
-        }
-
-        return $cards;
-    }
     public function getSingleRepresentation(int $index): string
     {
         return $this->representation[$index];
-    }
-
-    public function getAsString(): string
-    {
-        return $this->representation[$this->value];
     }
 }

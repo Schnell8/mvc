@@ -4,11 +4,10 @@ namespace App\Card;
 
 class Card
 {
-    protected $value;
+    protected string $value;
 
     public function __construct()
     {
-        $this->value = null;
+        $this->value = '';
     }
-
 }

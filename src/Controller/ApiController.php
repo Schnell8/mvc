@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
+use App\Game\Game;
 
+use Countable;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -116,4 +118,26 @@ class ApiController extends AbstractController
         return $response;
     }
 
+    #[Route("/api/game", name: "api_game", methods: ['POST', 'GET'])]
+    public function jsonApiGame(SessionInterface $session): JsonResponse
+    {
+        // hämta totalen för spelare, bank samt resultat
+        $playerHandValue = $session->get('playerHandValue');
+        $bankHandValue = $session->get('bankHandValue');
+        $gameResult = $session->get('gameResult');
+
+        // spara i gemensam variabel
+        $data = [
+            "playerHandValue" => $playerHandValue,
+            "bankHandValue" => $bankHandValue,
+            "gameResult" => $gameResult,
+        ];
+
+        // json
+        $response = new JsonResponse($data);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+    }
 }
