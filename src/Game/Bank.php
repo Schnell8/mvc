@@ -2,6 +2,16 @@
 
 namespace App\Game;
 
+/**
+ * This file contains the Bank class
+ */
+
+/**
+ * Class Bank
+ *
+ * Represents the bank inside the game
+ * Provides method to add cards to hand and access bank object
+ */
 class Bank
 {
     /**
@@ -10,17 +20,17 @@ class Bank
     private array $hand = [];
 
     /**
-     * Add a card to the bank's hand.
+     * Add a card to the bank's hand
      *
      * @param Card $card
      */
-    public function takeCard(Card $card): void
+    public function addCard(Card $card): void
     {
         $this->hand[] = $card;
     }
 
     /**
-     * Get the bank's hand.
+     * Get the bank's hand
      *
      * @return Card[] Array of Card objects
      */

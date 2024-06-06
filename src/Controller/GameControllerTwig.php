@@ -35,9 +35,9 @@ class GameControllerTwig extends AbstractController
 
         // spara ner kortleken, spelarhand, spelartotal, bankhand, banktotal i variabler
         $deck = $game->getDeck();
-        $playerHand = $game->getPlayerHand();
+        $playerHand = $game->getPlayer()->getHand();
         $playerHandValue = $this->calculateHandValue($playerHand);
-        $bankHand = $game->getBankHand();
+        $bankHand = $game->getBank()->getHand();
         $bankHandValue = $this->calculateHandValue($bankHand);
 
         // lägg i session

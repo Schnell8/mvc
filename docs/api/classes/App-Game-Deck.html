@@ -69,10 +69,6 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-dice.html" class="">Dice</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-game.html" class="">Game</a>
                 
             </li>
@@ -130,11 +126,15 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Deck</p>
+
+    <section class="phpdocumentor-description"><p>Represents a deck of 52 standard playing cards
+Provides methods to initialize, shuffle, draw cards, recreate deck in json format and access deck object</p>
+</section>
 
 
 
@@ -181,42 +181,45 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Deck constructor.</dd>
+<dd>Deck constructor
+Initializes deck calling the initializeDeck method</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Deck.html#method_deckForJson">deckForJson()</a>
     <span>
                                 &nbsp;: array&lt;string|int, string&gt;    </span>
 </dt>
-<dd>Get deck in JSON format.</dd>
+<dd>Get deck in JSON format</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Deck.html#method_drawCard">drawCard()</a>
     <span>
                                 &nbsp;: <a href="classes/App-Game-Card.html"><abbr title="\App\Game\Card">Card</abbr></a>    </span>
 </dt>
-<dd>Draw card from deck.</dd>
+<dd>Draw card from deck
+Raises Exception if deck is empty</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Deck.html#method_getDeck">getDeck()</a>
     <span>
                                 &nbsp;: array&lt;string|int, string&gt;    </span>
 </dt>
-<dd>Get deck.</dd>
+<dd>Get deck</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Deck.html#method_shuffle">shuffle()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Shuffle deck.</dd>
+<dd>Shuffle deck</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/App-Game-Deck.html#method_initializeDeck">initializeDeck()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>Initializes deck.</dd>
+<dd>Initializes deck
+Creates deck holding standard 52 playing cards</dd>
 
     </dl>
 
@@ -248,7 +251,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -290,11 +293,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Deck constructor.</p>
+        <p class="phpdocumentor-summary">Deck constructor
+Initializes deck calling the initializeDeck method</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -302,9 +306,7 @@
 
     <div class="phpdocumentor-label-line">
         </div>
-        <section class="phpdocumentor-description"><p>Initializes the deck by calling the initializeDeck method.</p>
-</section>
-
+    
     
     
 
@@ -326,11 +328,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">41</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get deck in JSON format.</p>
+        <p class="phpdocumentor-summary">Get deck in JSON format</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -348,7 +350,7 @@
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">array&lt;string|int, string&gt;</span>
                     &mdash;
-                <section class="phpdocumentor-description"><p>Array of strings in JSON format.</p>
+                <section class="phpdocumentor-description"><p>Array of strings in JSON format</p>
 </section>
 
             </section>
@@ -368,11 +370,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Draw card from deck.</p>
+        <p class="phpdocumentor-summary">Draw card from deck
+Raises Exception if deck is empty</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -410,11 +413,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get deck.</p>
+        <p class="phpdocumentor-summary">Get deck</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -452,11 +455,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Shuffle deck.</p>
+        <p class="phpdocumentor-summary">Shuffle deck</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -486,11 +489,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Deck.php"><a href="files/src-game-deck.html"><abbr title="src/Game/Deck.php">Deck.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Initializes deck.</p>
+        <p class="phpdocumentor-summary">Initializes deck
+Creates deck holding standard 52 playing cards</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>

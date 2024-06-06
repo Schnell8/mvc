@@ -226,44 +226,19 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LuckyControllerTwig.html#method_jsonQuote"
         },                {
-            "fqsen": "\\App\\Dice\\Dice",
-            "name": "Dice",
-            "summary": "",
-            "url": "classes/App-Dice-Dice.html"
-        },                {
-            "fqsen": "\\App\\Dice\\Dice\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/App-Dice-Dice.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Dice\\Dice\u003A\u003Aroll\u0028\u0029",
-            "name": "roll",
-            "summary": "",
-            "url": "classes/App-Dice-Dice.html#method_roll"
-        },                {
-            "fqsen": "\\App\\Dice\\Dice\u003A\u003AgetAsString\u0028\u0029",
-            "name": "getAsString",
-            "summary": "",
-            "url": "classes/App-Dice-Dice.html#method_getAsString"
-        },                {
-            "fqsen": "\\App\\Dice\\Dice\u003A\u003A\u0024value",
-            "name": "value",
-            "summary": "",
-            "url": "classes/App-Dice-Dice.html#property_value"
-        },                {
             "fqsen": "\\App\\Game\\Bank",
             "name": "Bank",
-            "summary": "",
+            "summary": "Class\u0020Bank",
             "url": "classes/App-Game-Bank.html"
         },                {
-            "fqsen": "\\App\\Game\\Bank\u003A\u003AtakeCard\u0028\u0029",
-            "name": "takeCard",
-            "summary": "Add\u0020a\u0020card\u0020to\u0020the\u0020bank\u0027s\u0020hand.",
-            "url": "classes/App-Game-Bank.html#method_takeCard"
+            "fqsen": "\\App\\Game\\Bank\u003A\u003AaddCard\u0028\u0029",
+            "name": "addCard",
+            "summary": "Add\u0020a\u0020card\u0020to\u0020the\u0020bank\u0027s\u0020hand",
+            "url": "classes/App-Game-Bank.html#method_addCard"
         },                {
             "fqsen": "\\App\\Game\\Bank\u003A\u003AgetHand\u0028\u0029",
             "name": "getHand",
-            "summary": "Get\u0020the\u0020bank\u0027s\u0020hand.",
+            "summary": "Get\u0020the\u0020bank\u0027s\u0020hand",
             "url": "classes/App-Game-Bank.html#method_getHand"
         },                {
             "fqsen": "\\App\\Game\\Bank\u003A\u003A\u0024hand",
@@ -273,62 +248,62 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Game\\Card",
             "name": "Card",
-            "summary": "",
+            "summary": "Class\u0020Card",
             "url": "classes/App-Game-Card.html"
         },                {
             "fqsen": "\\App\\Game\\Card\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Card\u0020constructor.",
+            "summary": "Card\u0020constructor\nInitializez\u0020card\u0020with\u0020given\u0020value",
             "url": "classes/App-Game-Card.html#method___construct"
         },                {
-            "fqsen": "\\App\\Game\\Card\u003A\u003AgetValue\u0028\u0029",
-            "name": "getValue",
-            "summary": "Get\u0020card\u0020value.",
-            "url": "classes/App-Game-Card.html#method_getValue"
+            "fqsen": "\\App\\Game\\Card\u003A\u003AgetCard\u0028\u0029",
+            "name": "getCard",
+            "summary": "Get\u0020card\u0020value",
+            "url": "classes/App-Game-Card.html#method_getCard"
         },                {
             "fqsen": "\\App\\Game\\Card\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
-            "summary": "Get\u0020string\u0020representation\u0020for\u0020card.",
+            "summary": "Get\u0020string\u0020representation\u0020for\u0020card",
             "url": "classes/App-Game-Card.html#method___toString"
         },                {
-            "fqsen": "\\App\\Game\\Card\u003A\u003A\u0024value",
-            "name": "value",
+            "fqsen": "\\App\\Game\\Card\u003A\u003A\u0024card",
+            "name": "card",
             "summary": "",
-            "url": "classes/App-Game-Card.html#property_value"
+            "url": "classes/App-Game-Card.html#property_card"
         },                {
             "fqsen": "\\App\\Game\\Deck",
             "name": "Deck",
-            "summary": "",
+            "summary": "Class\u0020Deck",
             "url": "classes/App-Game-Deck.html"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Deck\u0020constructor.",
+            "summary": "Deck\u0020constructor\nInitializes\u0020deck\u0020calling\u0020the\u0020initializeDeck\u0020method",
             "url": "classes/App-Game-Deck.html#method___construct"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003AinitializeDeck\u0028\u0029",
             "name": "initializeDeck",
-            "summary": "Initializes\u0020deck.",
+            "summary": "Initializes\u0020deck\nCreates\u0020deck\u0020holding\u0020standard\u002052\u0020playing\u0020cards",
             "url": "classes/App-Game-Deck.html#method_initializeDeck"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003AdeckForJson\u0028\u0029",
             "name": "deckForJson",
-            "summary": "Get\u0020deck\u0020in\u0020JSON\u0020format.",
+            "summary": "Get\u0020deck\u0020in\u0020JSON\u0020format",
             "url": "classes/App-Game-Deck.html#method_deckForJson"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003AgetDeck\u0028\u0029",
             "name": "getDeck",
-            "summary": "Get\u0020deck.",
+            "summary": "Get\u0020deck",
             "url": "classes/App-Game-Deck.html#method_getDeck"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003Ashuffle\u0028\u0029",
             "name": "shuffle",
-            "summary": "Shuffle\u0020deck.",
+            "summary": "Shuffle\u0020deck",
             "url": "classes/App-Game-Deck.html#method_shuffle"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003AdrawCard\u0028\u0029",
             "name": "drawCard",
-            "summary": "Draw\u0020card\u0020from\u0020deck.",
+            "summary": "Draw\u0020card\u0020from\u0020deck\nRaises\u0020Exception\u0020if\u0020deck\u0020is\u0020empty",
             "url": "classes/App-Game-Deck.html#method_drawCard"
         },                {
             "fqsen": "\\App\\Game\\Deck\u003A\u003A\u0024deck",
@@ -338,38 +313,38 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Game\\Game",
             "name": "Game",
-            "summary": "",
+            "summary": "Class\u0020Game",
             "url": "classes/App-Game-Game.html"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Game\u0020constructor.",
+            "summary": "Game\u0020constructor\nInitializes\u0020the\u0020player,\u0020bank,\u0020and\u0020deck,\u0020and\u0020shuffles\u0020the\u0020deck",
             "url": "classes/App-Game-Game.html#method___construct"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AstartGame\u0028\u0029",
             "name": "startGame",
-            "summary": "Starts\u0020the\u0020game\u0020by\u0020dealing\u0020initial\u0020cards.",
+            "summary": "Starts\u0020the\u0020game\u0020by\u0020dealing\u0020initial\u0020cards",
             "url": "classes/App-Game-Game.html#method_startGame"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AdealInitialCards\u0028\u0029",
             "name": "dealInitialCards",
-            "summary": "Deals\u0020initial\u0020cards\u0020to\u0020the\u0020player.",
+            "summary": "Deals\u0020initial\u0020cards\u0020to\u0020the\u0020player",
             "url": "classes/App-Game-Game.html#method_dealInitialCards"
+        },                {
+            "fqsen": "\\App\\Game\\Game\u003A\u003AgetPlayer\u0028\u0029",
+            "name": "getPlayer",
+            "summary": "Get\u0020player\u0020used\u0020in\u0020game",
+            "url": "classes/App-Game-Game.html#method_getPlayer"
+        },                {
+            "fqsen": "\\App\\Game\\Game\u003A\u003AgetBank\u0028\u0029",
+            "name": "getBank",
+            "summary": "Get\u0020bank\u0020used\u0020in\u0020game",
+            "url": "classes/App-Game-Game.html#method_getBank"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003AgetDeck\u0028\u0029",
             "name": "getDeck",
-            "summary": "Get\u0020deck\u0020used\u0020in\u0020the\u0020game.",
+            "summary": "Get\u0020deck\u0020used\u0020in\u0020the\u0020game",
             "url": "classes/App-Game-Game.html#method_getDeck"
-        },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003AgetPlayerHand\u0028\u0029",
-            "name": "getPlayerHand",
-            "summary": "Get\u0020player\u0027s\u0020hand.",
-            "url": "classes/App-Game-Game.html#method_getPlayerHand"
-        },                {
-            "fqsen": "\\App\\Game\\Game\u003A\u003AgetBankHand\u0028\u0029",
-            "name": "getBankHand",
-            "summary": "Get\u0020bank\u0027s\u0020hand.",
-            "url": "classes/App-Game-Game.html#method_getBankHand"
         },                {
             "fqsen": "\\App\\Game\\Game\u003A\u003A\u0024player",
             "name": "player",
@@ -388,17 +363,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Game\\Player",
             "name": "Player",
-            "summary": "",
+            "summary": "Class\u0020Player",
             "url": "classes/App-Game-Player.html"
         },                {
-            "fqsen": "\\App\\Game\\Player\u003A\u003AtakeCard\u0028\u0029",
-            "name": "takeCard",
-            "summary": "Add\u0020a\u0020card\u0020to\u0020the\u0020bank\u0027s\u0020hand.",
-            "url": "classes/App-Game-Player.html#method_takeCard"
+            "fqsen": "\\App\\Game\\Player\u003A\u003AaddCard\u0028\u0029",
+            "name": "addCard",
+            "summary": "Add\u0020a\u0020card\u0020to\u0020the\u0020bank\u0027s\u0020hand",
+            "url": "classes/App-Game-Player.html#method_addCard"
         },                {
             "fqsen": "\\App\\Game\\Player\u003A\u003AgetHand\u0028\u0029",
             "name": "getHand",
-            "summary": "Get\u0020the\u0020player\u0027s\u0020hand.",
+            "summary": "Get\u0020the\u0020player\u0027s\u0020hand",
             "url": "classes/App-Game-Player.html#method_getHand"
         },                {
             "fqsen": "\\App\\Game\\Player\u003A\u003A\u0024hand",
@@ -425,11 +400,6 @@ Search.appendIndex(
             "name": "Controller",
             "summary": "",
             "url": "namespaces/app-controller.html"
-        },                {
-            "fqsen": "\\App\\Dice",
-            "name": "Dice",
-            "summary": "",
-            "url": "namespaces/app-dice.html"
         },                {
             "fqsen": "\\App\\Game",
             "name": "Game",

@@ -69,10 +69,6 @@
                 
             </li>
                     <li>
-                <a href="namespaces/app-dice.html" class="">Dice</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/app-game.html" class="">Game</a>
                 
             </li>
@@ -130,11 +126,15 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Card.php"><a href="files/src-game-card.html"><abbr title="src/Game/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Card</p>
+
+    <section class="phpdocumentor-description"><p>Represents a playing card
+Provides method to access the card value and string representation</p>
+</section>
 
 
 
@@ -163,7 +163,7 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/App-Game-Card.html#property_value">$value</a>
+    <a href="classes/App-Game-Card.html#property_card">$card</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
@@ -181,21 +181,22 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
-<dd>Card constructor.</dd>
+<dd>Card constructor
+Initializez card with given value</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Card.html#method___toString">__toString()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Get string representation for card.</dd>
+<dd>Get string representation for card</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-Card.html#method_getValue">getValue()</a>
+    <a href="classes/App-Game-Card.html#method_getCard">getCard()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
-<dd>Get card value.</dd>
+<dd>Get card value</dd>
 
     </dl>
 
@@ -217,9 +218,9 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_value">
-        $value
-        <a href="classes/App-Game-Card.html#property_value" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_card">
+        $card
+        <a href="classes/App-Game-Card.html#property_card" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -227,7 +228,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Card.php"><a href="files/src-game-card.html"><abbr title="src/Game/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -235,7 +236,7 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$value</span>
+    <span class="phpdocumentor-signature__name">$card</span>
     </code>
 
     
@@ -269,15 +270,16 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Card.php"><a href="files/src-game-card.html"><abbr title="src/Game/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Card constructor.</p>
+        <p class="phpdocumentor-summary">Card constructor
+Initializez card with given value</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$card</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -285,11 +287,11 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$value</span>
+                <span class="phpdocumentor-signature__argument__name">$card</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>card value</p>
+                    <section class="phpdocumentor-description"><p>Value for card</p>
 </section>
 
             </dd>
@@ -315,11 +317,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Card.php"><a href="files/src-game-card.html"><abbr title="src/Game/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get string representation for card.</p>
+        <p class="phpdocumentor-summary">Get string representation for card</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -349,23 +351,23 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getValue">
-        getValue()
-        <a href="classes/App-Game-Card.html#method_getValue" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getCard">
+        getCard()
+        <a href="classes/App-Game-Card.html#method_getCard" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Card.php"><a href="files/src-game-card.html"><abbr title="src/Game/Card.php">Card.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Get card value.</p>
+        <p class="phpdocumentor-summary">Get card value</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">getCard</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -498,7 +500,7 @@
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/App-Game-Card.html#property_value">$value<a href="classes/App-Game-Card.html"></li>
+                                                    <li><a href="classes/App-Game-Card.html#property_card">$card<a href="classes/App-Game-Card.html"></li>
                                             </ul>
                 </li>
             
@@ -507,7 +509,7 @@
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/App-Game-Card.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/App-Game-Card.html#method___toString">__toString()</a></li>
-                                            <li><a href="classes/App-Game-Card.html#method_getValue">getValue()</a></li>
+                                            <li><a href="classes/App-Game-Card.html#method_getCard">getCard()</a></li>
                                     </ul>
             </li>
                     </ul>

@@ -2,40 +2,51 @@
 
 namespace App\Game;
 
+/**
+ * This file contains the Card class
+ */
+
+/**
+ * Class Card
+ *
+ * Represents a playing card
+ * Provides method to access the card value and string representation
+ */
 class Card
 {
     /**
      * @var string Card value
      */
-    private string $value;
+    private string $card;
 
     /**
-     * Card constructor.
+     * Card constructor
+     * Initializez card with given value
      *
-     * @param string $value card value
+     * @param string $card Value for card
      */
-    public function __construct(string $value)
+    public function __construct(string $card)
     {
-        $this->value = $value;
+        $this->card = $card;
     }
 
     /**
-     * Get card value.
+     * Get card value
      *
      * @return string Card value
      */
-    public function getValue(): string
+    public function getCard(): string
     {
-        return $this->value;
+        return $this->card;
     }
 
     /**
-     * Get string representation for card.
+     * Get string representation for card
      *
      * @return string String representation for card
      */
     public function __toString(): string
     {
-        return $this->value;
+        return $this->card;
     }
 }

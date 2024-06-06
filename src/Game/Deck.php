@@ -2,6 +2,16 @@
 
 namespace App\Game;
 
+/**
+ * This file contains the Deck class
+ */
+
+/**
+ * Class Deck
+ *
+ * Represents a deck of 52 standard playing cards
+ * Provides methods to initialize, shuffle, draw cards, recreate deck in json format and access deck object
+ */
 class Deck
 {
     /**
@@ -10,8 +20,8 @@ class Deck
     private array $deck = [];
 
     /**
-     * Deck constructor.
-     * Initializes the deck by calling the initializeDeck method.
+     * Deck constructor
+     * Initializes deck calling the initializeDeck method
      */
     public function __construct()
     {
@@ -19,7 +29,8 @@ class Deck
     }
 
     /**
-     * Initializes deck.
+     * Initializes deck
+     * Creates deck holding standard 52 playing cards
      */
     private function initializeDeck(): void
     {
@@ -34,9 +45,9 @@ class Deck
     }
 
     /**
-     * Get deck in JSON format.
+     * Get deck in JSON format
      *
-     * @return string[] Array of strings in JSON format.
+     * @return string[] Array of strings in JSON format
      */
     public static function deckForJson(): array
     {
@@ -54,7 +65,7 @@ class Deck
     }
 
     /**
-     * Get deck.
+     * Get deck
      *
      * @return string[] Array of strings
      */
@@ -64,7 +75,7 @@ class Deck
     }
 
     /**
-     * Shuffle deck.
+     * Shuffle deck
      */
     public function shuffle(): void
     {
@@ -72,7 +83,8 @@ class Deck
     }
 
     /**
-     * Draw card from deck.
+     * Draw card from deck
+     * Raises Exception if deck is empty
      *
      * @return Card Card object
      */
