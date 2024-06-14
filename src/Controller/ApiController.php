@@ -4,11 +4,11 @@ namespace App\Controller;
 
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
-use App\Game\Game;
+use App\Repository\BookRepository;
 
-use Countable;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -135,6 +135,37 @@ class ApiController extends AbstractController
 
         // json
         $response = new JsonResponse($data);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+    }
+
+    #[Route('api/library/books', name: 'api_library')]
+    public function jsonApiLibrary(
+        BookRepository $bookRepository
+    ): Response {
+        $books = $bookRepository->findAll();
+
+        $response = $this->json($books);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+    }
+
+    #[Route('/api/library/book/{isbn}', name: 'api_library_isbn')]
+    public function jsonApiBookById(
+        BookRepository $bookRepository,
+        int $isbn
+    ): Response {
+        $book = $bookRepository->findOneBy(['isbn' => $isbn]);
+
+        if (!$book) {
+            return $this->json(['error' => 'Book not found'], Response::HTTP_NOT_FOUND);
+        }
+
+        $response = $this->json($book);
         $response->setEncodingOptions(
             $response->getEncodingOptions() | JSON_PRETTY_PRINT
         );

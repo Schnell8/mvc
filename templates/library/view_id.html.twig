@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Render book by id{% endblock %}
+
+{% block main %}
+<div>
+    <h1>View by ID</h1>
+</div>
+<div>
+    <table class="library-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ book.getId|e }}</td>
+                <td>{{ book.getTitle|e }}</a></td>
+                <td>{{ book.getIsbn|e }}</td>
+                <td>{{ book.getAuthor|e }}</td>
+                <td><img src="{{ book.getImage|e }}" alt="{{ book.getTitle|e }}" class="book-image"></td>
+                <td><a href="{{ path('library_edit', { 'id': book.id }) }}">Edit</a></td>
+                <td><a href="{{ path('delete_book', { 'id': book.id }) }}">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <p><a href="{{ path('library_view_all') }}" class="button">Back to library</a></p>
+    <p><a href="{{ path('library') }}" class="button">Back to start</a></p>
+</div>
+{% endblock %}

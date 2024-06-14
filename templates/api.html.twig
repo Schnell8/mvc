@@ -5,11 +5,9 @@
 {% block main %}
     <h1>API</h1>
 
-
-
-        <h2>/quote</h2>
-        <p>Denna route slumpar fram ett av tre möjliga citat, skriver ut dagens datum samt en tidsstämpel för när användaren gått in på routen.</p>
-        <li><a href="{{ path('api_quote') }}">quote</a></li>
+    <h2>/quote</h2>
+    <p>Denna route slumpar fram ett av tre möjliga citat, skriver ut dagens datum samt en tidsstämpel för när användaren gått in på routen.</p>
+    <li><a href="{{ path('api_quote') }}">quote</a></li>
     
     <form method="get" action="">
         <h2>/deck</h2>
@@ -29,9 +27,27 @@
         <input type="submit" name="draw" value="Draw"
             onClick="this.form.action='{{ path('api_deck_draw') }}';">
 
-        <h2>/deck/draw/:number</h2>
+        <h2>/deck/draw/{number}</h2>
         <p>Drar ett kort ur kortleken där användaren själv kan ändra i urlen för att dra önskat antal kort. Visar antalet kort som finns kvar i kortleken.</p>
         <input type="submit" name="number" value="Draw number"
             onClick="this.form.action='{{ path('api_deck_draw_number', {num: 1}) }}';">
     </form>
+
+    <form method="post" action="">
+        <h2>/game</h2>
+        <p>Visar nuvarande ställning i spelet.</p>
+        <input type="submit" name="game" value="Game"
+            onClick="this.form.action='{{ path('api_game') }}';">
+    </form>
+
+    <h2>/library/books</h2>
+    <p>Visar samtliga böcker i biblioteket.</p>
+    <li><a href="{{ path('api_library') }}">Library</a></li>
+
+    <h2>/library/book/{isbn}</h2>
+    <p>Visar bok med angivet isbn.</p>
+    <li><a href="{{ path('api_library_isbn', { 'isbn': 123 }) }}">Se bok med isbn 123</a></li>
+    <li><a href="{{ path('api_library_isbn', { 'isbn': 456 }) }}">Se bok med isbn 456</a></li>
+    <li><a href="{{ path('api_library_isbn', { 'isbn': 789 }) }}">Se bok med isbn 789</a></li>
+
 {% endblock %}

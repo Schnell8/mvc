@@ -230,7 +230,6 @@ footer {
     color: #fff;
     padding: 20px;
     margin-top: 5rem;
-    width: 100%;
 }
 
 footer p {
@@ -248,6 +247,64 @@ footer a:hover {
 
 .red {
     color: red;
+}
+
+/* KMOM05 */
+.library-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.library-table th,
+.library-table td {
+    padding: 8px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+.library-table th {
+    background-color: #fff;
+}
+
+.book-image {
+    max-width: 100px;
+    height: auto;
+}
+
+.add-form,
+.edit-form {
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 
