@@ -54,32 +54,18 @@ class GameHelper
      */
     public function determineWinner(int $playerHandValue, int $bankHandValue): string
     {
-        // Både spelare och bank över 21
-        if ($playerHandValue > 21 && $bankHandValue > 21) {
-            return "It's a tie!";
-        }
-
-        // Spelare över 21
+        // Spelare över 21 -> banken vinner, båda över 21 -> oavgjort
         if ($playerHandValue > 21) {
-            return "Bank wins!";
+            return $bankHandValue > 21 ? "It's a tie!" : "Bank wins!";
         }
 
-        // Bank över 21
+        // Bank över 21 -> spelare vinner
         if ($bankHandValue > 21) {
             return "Player wins!";
         }
-
-        // Spelare högre än bank
-        if ($playerHandValue > $bankHandValue) {
-            return "Player wins!";
-        }
-
-        // Bank högre än spelare
-        if ($bankHandValue > $playerHandValue) {
-            return "Bank wins!";
-        }
-
-        // Samma värde
-        return "It's a tie!";
+    
+        // jämför spelarhand mot bankhand
+        return $playerHandValue > $bankHandValue ? "Player wins!"
+            : ($playerHandValue < $bankHandValue ? "Bank wins!" : "It's a tie!");
     }
 }
