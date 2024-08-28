@@ -14,37 +14,30 @@ class GameHelper
     {
         $handValue = 0;
         $numberOfAces = 0;
+        $cardValues = [
+            'K' => 13, // Kung
+            'Q' => 12, // Dam
+            'J' => 11, // Knekt
+            '1' => 10  // 10
+        ];
 
         foreach ($hand as $card) {
-            $cardValue = substr($card, 0, 1); // första tecknet
+            // första tecknet
+            $cardValue = substr($card, 0, 1);
 
-            // Beräkna antal ess
             if ($cardValue === 'A') {
+                // Lägg till antal ess
                 $numberOfAces++;
-
-            // Värde för kung
-            } elseif ($cardValue === 'K') {
-                $handValue += 13;
-
-            // Värde för dam
-            } elseif ($cardValue === 'Q') {
-                $handValue += 12;
-
-            // Värde för knekt
-            } elseif ($cardValue === 'J') {
-                $handValue += 11;
-
-            // Värde för 10
-            } elseif ($cardValue === '1') {
-                $handValue += 10;
-
+            } elseif (isset($cardValues[$cardValue])) {
+                // Lägg till värde för kung, dam, knekt, 10
+                $handValue += $cardValues[$cardValue];
             } else {
-                // Värde för övriga kort
+                // Lägg till värde för övriga kort
                 $handValue += (int)$cardValue;
             }
         }
 
-        // Beräkna värdet för ess
+        // Lägg till värde för ess
         for ($i = 0; $i < $numberOfAces; $i++) {
             $handValue += ($handValue + 14 <= 21) ? 14 : 1;
         }
