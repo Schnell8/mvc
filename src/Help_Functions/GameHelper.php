@@ -18,29 +18,22 @@ class GameHelper
         foreach ($hand as $card) {
             $cardValue = substr($card, 0, 1); // första tecknet
 
-            switch ($cardValue) {
-                case 'A':
-                    $numberOfAces++;
-                    break;
-                case 'K':
-                    $handValue += 13;
-                    break;
-                case 'Q':
-                    $handValue += 12;
-                    break;
-                case 'J':
-                    $handValue += 11;
-                    break;
-                case '1':
-                    $handValue += 10;
-                    break;
-                default:
-                    $handValue += (int)$cardValue;
-                    break;
+            if ($cardValue === 'A') {
+                $numberOfAces++;
+            } elseif ($cardValue === 'K') {
+                $handValue += 13; // Värde för kung
+            } elseif ($cardValue === 'Q') {
+                $handValue += 12; // Värde för dam
+            } elseif ($cardValue === 'J') {
+                $handValue += 11; // Värde för knekt
+            } elseif ($cardValue === '1') {
+                $handValue += 10; // Värde för 10
+            } else {
+                $handValue += (int)$cardValue; // Värde för övriga kort
             }
         }
 
-        // Justera värdet för ess
+        // Beräkna värdet för ess
         for ($i = 0; $i < $numberOfAces; $i++) {
             $handValue += ($handValue + 14 <= 21) ? 14 : 1;
         }
@@ -72,16 +65,17 @@ class GameHelper
             return "Player wins!";
         }
 
-        // Spelare under 21 men över bank
+        // Spelare högre än bank
         if ($playerHandValue > $bankHandValue) {
             return "Player wins!";
         }
 
-        // Spelare under 21 men under bank
-        if ($playerHandValue < $bankHandValue) {
+        // Bank högre än spelare
+        if ($bankHandValue > $playerHandValue) {
             return "Bank wins!";
         }
 
+        // Samma värde
         return "It's a tie!";
     }
 }
