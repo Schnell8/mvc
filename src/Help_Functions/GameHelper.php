@@ -18,18 +18,29 @@ class GameHelper
         foreach ($hand as $card) {
             $cardValue = substr($card, 0, 1); // första tecknet
 
+            // Beräkna antal ess
             if ($cardValue === 'A') {
                 $numberOfAces++;
+
+            // Värde för kung
             } elseif ($cardValue === 'K') {
-                $handValue += 13; // Värde för kung
+                $handValue += 13;
+
+            // Värde för dam
             } elseif ($cardValue === 'Q') {
-                $handValue += 12; // Värde för dam
+                $handValue += 12;
+
+            // Värde för knekt
             } elseif ($cardValue === 'J') {
-                $handValue += 11; // Värde för knekt
+                $handValue += 11;
+
+            // Värde för 10
             } elseif ($cardValue === '1') {
-                $handValue += 10; // Värde för 10
+                $handValue += 10;
+
             } else {
-                $handValue += (int)$cardValue; // Värde för övriga kort
+                // Värde för övriga kort
+                $handValue += (int)$cardValue;
             }
         }
 
