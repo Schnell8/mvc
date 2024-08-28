@@ -44,18 +44,17 @@ class CardControllerTwig extends AbstractController
     #[Route("/card/deck/shuffle", name: "shuffle")]
     public function cardDeckShuffle(SessionInterface $session): Response
     {
-        $deck = new DeckOfCards();
-        for ($i = 1; $i <= 52; $i++) {
-            $card = new CardGraphic();
-            $cardString = $card->getSingleRepresentation($i);
-            $deck->addCard($cardString);
+        $deckOfCards = $session->get("deck_of_cards");
+
+        if (!is_array($deckOfCards)) {
+            throw new \Exception("You must init deck!");
         }
-        $deckOfCards = $deck->getDeck();
-        $numberOfCards = $deck->getNumberCards();
+
         shuffle($deckOfCards);
+        $cardsLeft = count($deckOfCards);
 
         $session->set("deck_of_cards", $deckOfCards);
-        $session->set("cards_left", $numberOfCards);
+        $session->set("cards_left", $cardsLeft);
 
         $data = [
             "shuffled_deck" => $deckOfCards,
@@ -68,15 +67,21 @@ class CardControllerTwig extends AbstractController
     public function cardDeckDraw(SessionInterface $session): Response
     {
         $deckOfCards = $session->get("deck_of_cards");
+
+        if (!is_array($deckOfCards)) {
+            throw new \Exception("You must init deck!");
+        }
+
         $cardsLeft = $session->get("cards_left");
 
         if ($cardsLeft === 0) {
             throw new \Exception("No more cards left to draw!");
-        } else {
-            shuffle($deckOfCards);
-            $card = $deckOfCards[0];
-            array_splice($deckOfCards, 0, 1);
         }
+
+        shuffle($deckOfCards);
+        $card = $deckOfCards[0];
+        array_splice($deckOfCards, 0, 1);
+
         $cardsLeft = count($deckOfCards);
 
         $session->set("deck_of_cards", $deckOfCards);
@@ -94,7 +99,16 @@ class CardControllerTwig extends AbstractController
     public function cardDeckDrawNumber(int $num, SessionInterface $session): Response
     {
         $deckOfCards = $session->get("deck_of_cards");
+
+        if (!is_array($deckOfCards)) {
+            throw new \Exception("You must init deck!");
+        }
+
         $cardsLeft = $session->get("cards_left");
+
+        if ($cardsLeft === 0) {
+            throw new \Exception("No more cards left to draw!");
+        }
 
         if ($num > $cardsLeft) {
             throw new \Exception("Number too high!");

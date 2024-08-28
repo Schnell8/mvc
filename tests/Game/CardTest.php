@@ -34,7 +34,7 @@ class CardTest extends TestCase
     /**
      * Test that __toString returns correct string representation
      */
-    public function test__toString(): void
+    public function testToString(): void
     {
         $cardValue = '10♣';
         $card = new Card($cardValue);

@@ -21,6 +21,12 @@ class LuckyControllerTwig extends AbstractController
         return $this->render('about.html.twig');
     }
 
+    #[Route("/metrics", name: "metrics")]
+    public function metrics(): Response
+    {
+        return $this->render('metrics.html.twig');
+    }
+
     #[Route("/report", name: "report")]
     public function report(): Response
     {
@@ -44,14 +50,14 @@ class LuckyControllerTwig extends AbstractController
     {
         $quotes = array("You are braver than you believe, and stronger than you seem, and smarter than you think.", "Positive anything is better than negative nothing.", "It is not whether you get knocked down, it is whether you get up.");
         $number = random_int(0, 2);
-        $t = time();
-        $date = date("Y-m-d", $t);
-        $curr_time = date("H:i:s ", $t);
+        $time = time();
+        $date = date("Y-m-d", $time);
+        $currTime = date("H:i:s ", $time);
 
         $data = [
             'dagens citat' => $quotes[$number],
             'dagens datum' => $date,
-            'tidsstampel' => $curr_time
+            'tidsstampel' => $currTime
         ];
 
         $response = new JsonResponse($data);

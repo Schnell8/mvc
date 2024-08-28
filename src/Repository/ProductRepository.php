@@ -29,13 +29,16 @@ class ProductRepository extends ServiceEntityRepository
      */
     public function findByMinimumValue(int $value): array
     {
-        return $this->createQueryBuilder('p')
+        $result = $this->createQueryBuilder('p')
             ->andWhere('p.value >= :value')
             ->setParameter('value', $value)
             ->orderBy('p.value', 'ASC')
             ->getQuery()
             ->getResult()
         ;
+
+        // update to fix issue from scrutinizer
+        return is_array($result) ? $result : [];
     }
 
     /**
