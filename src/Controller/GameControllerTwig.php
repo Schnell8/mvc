@@ -63,10 +63,6 @@ class GameControllerTwig extends AbstractController
         $bankHand = $session->get('bankHand');
         $bankHandValue = $session->get('bankHandValue');
 
-        // validera värden
-        $playerHandValue = is_numeric($playerHandValue) ? (int)$playerHandValue : 0;
-        $bankHandValue = is_numeric($bankHandValue) ? (int)$bankHandValue : 0;
-
         // beräkna vinnare
         $gameResult = $this->determineWinner($playerHandValue, $bankHandValue);
 
@@ -93,16 +89,6 @@ class GameControllerTwig extends AbstractController
         $deck = $session->get('deck');
         $playerHand = $session->get('playerHand');
 
-        // Kontrollera att $playerHand är en array
-        if (!is_array($playerHand)) {
-            throw new \Exception('Player hand is not initialized properly.');
-        }
-
-        // Kontrollera att deck är av rätt typ
-        if (!($deck instanceof Deck)) {
-            throw new \Exception('Deck is not initialized properly.');
-        }
-
         // dra kort -> lägg till kort i spelarhand -> beräkna totalen
         $card = $deck->drawCard();
         $playerHand[] = $card;
@@ -124,20 +110,11 @@ class GameControllerTwig extends AbstractController
     #[Route("/game/stay", name: "stay")]
     public function stay(SessionInterface $session): Response
     {
-        // hämta deck, bankhand, beräkna totalen
+        // hämta deck, bankhand
         $deck = $session->get('deck');
         $bankHand = $session->get('bankHand');
 
-        // Kontrollera att $playerHand är en array
-        if (!is_array($bankHand)) {
-            throw new \Exception('Bank hand is not initialized properly.');
-        }
-
-        // Kontrollera att deck är av rätt typ
-        if (!($deck instanceof Deck)) {
-            throw new \Exception('Deck is not initialized properly.');
-        }
-
+        // beräkna totalen för bankhand
         $bankHandValue = $this->calculateHandValue($bankHand);
 
         // är totalen under 17 dra kort och lägg i handen, uppdatera totalen
@@ -171,18 +148,32 @@ class GameControllerTwig extends AbstractController
         foreach ($hand as $card) {
             $cardValue = substr($card, 0, 1); // första tecknet
 
-            if ($cardValue === 'A') {
-                $numberOfAces++; // räkna antal ess
+            switch ($cardValue) {
+                case 'A':
+                    // beräkna antal ess
+                    $numberOfAces++;
+                    break;
+                case 'K':
+                    // värde för kung
+                    $handValue += 13;
+                    break;
+                case 'Q':
+                    // värde för dam
+                    $handValue += 12;
+                    break;
+                case 'J':
+                    // värde för knekt
+                    $handValue += 11;
+                    break;
+                case '1':
+                    // värde för kort 10
+                    $handValue += 10;
+                    break;
+                default:
+                    // värde för kort 2-9
+                    $handValue += (int)$cardValue;
+                    break;
             }
-
-            if (in_array($cardValue, ['K', 'Q', 'J', '1'])) {
-                // Handle face cards and '10' (represented as '1')
-                $handValue += $this->getCardValue($cardValue);
-                continue; // Skip the rest of the loop for this card
-            }
-
-            // lägg till värde för övriga kort
-            $handValue += (int)$cardValue;
         }
 
         // loopa genom essen, om +14 gör att totalen är mindre eller lika med 21 använd ess som 14 annars 1
@@ -193,41 +184,30 @@ class GameControllerTwig extends AbstractController
         return $handValue; // returnera totalen
     }
 
-    private function getCardValue(string $cardValue): int
-    {
-        switch ($cardValue) {
-            case 'K':
-                return 13;
-            case 'Q':
-                return 12;
-            case 'J':
-                return 11;
-            case '1':
-                return 10;
-            default:
-                return 0;
-        }
-    }
-
     // funktion för att beräkna vem som vinner
     private function determineWinner(int $playerHandValue, int $bankHandValue): string
     {
+        // både spelare och bank över 21
         if ($playerHandValue > 21 && $bankHandValue > 21) {
             return "It's a tie!";
         }
 
+        // spelare över 21
         if ($playerHandValue > 21) {
             return "Bank wins!";
         }
 
+        // bank över 21
         if ($bankHandValue > 21) {
             return "Player wins!";
         }
 
+        // spelare under 21 men över bank
         if ($playerHandValue > $bankHandValue) {
             return "Player wins!";
         }
 
+        // spelare under 21 men under bank
         if ($playerHandValue < $bankHandValue) {
             return "Bank wins!";
         }

@@ -39,11 +39,6 @@ class ApiController extends AbstractController
     public function jsonApiDeckShuffle(SessionInterface $session): JsonResponse
     {
         $deck = $session->get("deck");
-
-        if (!is_array($deck)) {
-            throw new \Exception("You must init deck!");
-        }
-
         shuffle($deck);
 
         $session->set("deck", $deck);
@@ -63,11 +58,6 @@ class ApiController extends AbstractController
     public function jsonApiDeckDraw(SessionInterface $session): JsonResponse
     {
         $deck = $session->get("deck");
-
-        if (!is_array($deck)) {
-            throw new \Exception("You must init deck!");
-        }
-
         $cardsLeft = count($deck);
 
         if ($cardsLeft === 0) {
@@ -99,16 +89,7 @@ class ApiController extends AbstractController
     public function jsonApiDeckDrawNumber(int $num, SessionInterface $session): JsonResponse
     {
         $deck = $session->get("deck");
-
-        if (!is_array($deck)) {
-            throw new \Exception("You must init deck!");
-        }
-
         $cardsLeft = $session->get("cards_left");
-
-        if ($cardsLeft === 0) {
-            throw new \Exception("No more cards left to draw!");
-        }
 
         if ($num > $cardsLeft) {
             throw new \Exception("Number too high!");

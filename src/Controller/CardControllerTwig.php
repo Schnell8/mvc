@@ -46,10 +46,6 @@ class CardControllerTwig extends AbstractController
     {
         $deckOfCards = $session->get("deck_of_cards");
 
-        if (!is_array($deckOfCards)) {
-            throw new \Exception("You must init deck!");
-        }
-
         shuffle($deckOfCards);
         $cardsLeft = count($deckOfCards);
 
@@ -67,11 +63,6 @@ class CardControllerTwig extends AbstractController
     public function cardDeckDraw(SessionInterface $session): Response
     {
         $deckOfCards = $session->get("deck_of_cards");
-
-        if (!is_array($deckOfCards)) {
-            throw new \Exception("You must init deck!");
-        }
-
         $cardsLeft = $session->get("cards_left");
 
         if ($cardsLeft === 0) {
@@ -99,16 +90,7 @@ class CardControllerTwig extends AbstractController
     public function cardDeckDrawNumber(int $num, SessionInterface $session): Response
     {
         $deckOfCards = $session->get("deck_of_cards");
-
-        if (!is_array($deckOfCards)) {
-            throw new \Exception("You must init deck!");
-        }
-
         $cardsLeft = $session->get("cards_left");
-
-        if ($cardsLeft === 0) {
-            throw new \Exception("No more cards left to draw!");
-        }
 
         if ($num > $cardsLeft) {
             throw new \Exception("Number too high!");
