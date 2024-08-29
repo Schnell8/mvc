@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-08-28 12:39:26        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-08-29 07:05:52        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -60,24 +60,24 @@
         <div class="bloc bloc-number">
             <div class="label">Test suites</div>
             <div class="number">
-                5            </div>
+                6            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">Assertions</div>
             <div class="number">
-                22            </div>
+                28            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">
                 classes never called by tests
-                <small>(76.19 %)</small>
+                <small>(71.43 %)</small>
             </div>
             <div class="number">
-                16            </div>
+                15            </div>
         </div>
     </div>
 </div>
@@ -257,17 +257,6 @@
                                     </td>
                                                             </tr>
                                                         <tr>
-                                <td><span class="path">App\Help_Functions\GameHelper</span></td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 1);">
-                                        11                                        </span>
-                                    </td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.15);">
-                                        0.15                                        </span>
-                                    </td>
-                                                            </tr>
-                                                        <tr>
                                 <td><span class="path">App\Kernel</span></td>
                                                                     <td>
                                         <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);">
@@ -357,6 +346,17 @@
                                                                             <br>                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
                                         <span class="path">App\Game\Game</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">App\Game\HelpTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br>                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            11                                        </span>
+                                        <span class="path">App\Help_Functions\GameHelper</span>
                                                                     </td>
                             </tr>
                                                     <tr>
@@ -620,7 +620,7 @@
 
 
             
-            var json = {"name":"Execution time","children":[{"name":"App\\Game\\BankTest","time":0.008049},{"name":"App\\Game\\CardTest","time":0.000719},{"name":"App\\Game\\DeckTest","time":0.004649},{"name":"App\\Game\\GameTest","time":0.001538},{"name":"App\\Game\\PlayerTest","time":0.000629}]};
+            var json = {"name":"Execution time","children":[{"name":"App\\Game\\BankTest","time":0.007348},{"name":"App\\Game\\CardTest","time":0.000866},{"name":"App\\Game\\DeckTest","time":0.003753},{"name":"App\\Game\\GameTest","time":0.001249},{"name":"App\\Game\\HelpTest","time":0.001379},{"name":"App\\Game\\PlayerTest","time":0.000827}]};
             root = json;
             var nodes = treemap.nodes(json)
                 .filter(function (d) {

@@ -33,6 +33,7 @@ class GameHelper
                 $handValue += $cardValues[$cardValue];
             } else {
                 // Lägg till värde för övriga kort
+
                 $handValue += (int)$cardValue;
             }
         }
