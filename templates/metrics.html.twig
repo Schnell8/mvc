@@ -82,34 +82,38 @@
     <div>
         <h3>Analys efter implementering</h3>
         <p>wdjiwdjwdi</p>
-        <figure>
-            <figcaption>Maintainability/Complexity före</figcaption>
-            <br>
-            <a href="{{ asset('img/metrics_before.png') }}">
-                <img src="{{ asset('img/metrics_before.png') }}" alt="metrics before" style="width: 400px;">
-            </a>
-        </figure>
-        <figure>
-            <figcaption>Maintainability/Complexity efter</figcaption>
-            <br>
-            <a href="{{ asset('img/metrics_after.png') }}">
-                <img src="{{ asset('img/metrics_after.png') }}" alt="metrics after" style="width: 400px;">
-            </a>
-        </figure>
-        <figure>
-            <figcaption>Kvalitetsindex före</figcaption>
-            <br>
-            <a href="https://scrutinizer-ci.com/g/Schnell8/mvc/?branch=main">
-                <img src="{{ asset('img/scrutinizer_before.png') }}" alt="scrutinizer before" style="width: 400px;">
-            </a>
-        </figure>
-        <figure>
-            <figcaption>Kvalitetsindex efter</figcaption>
-            <br>
-            <a href="">
-                <img src="{{ asset('img/scrutinizer_after.png') }}" alt="scrutinizer after" style="width: 400px;">
-            </a>
-        </figure>
+        <div style="display: flex;">
+            <figure>
+                <figcaption>Maintainability/Complexity före</figcaption>
+                <br>
+                <a href="{{ asset('img/metrics_before.png') }}">
+                    <img src="{{ asset('img/metrics_before.png') }}" alt="metrics before" style="width: 400px;">
+                </a>
+            </figure>
+            <figure>
+                <figcaption>Maintainability/Complexity efter</figcaption>
+                <br>
+                <a href="{{ asset('img/metrics_after.png') }}">
+                    <img src="{{ asset('img/metrics_after.png') }}" alt="metrics after" style="width: 400px;">
+                </a>
+            </figure>
+        </div>
+        <div style="display: flex;">
+            <figure>
+                <figcaption>Kvalitetsindex före</figcaption>
+                <br>
+                <a href="https://scrutinizer-ci.com/g/Schnell8/mvc/?branch=main">
+                    <img src="{{ asset('img/scrutinizer_before.png') }}" alt="scrutinizer before" style="width: 400px;">
+                </a>
+            </figure>
+            <figure>
+                <figcaption>Kvalitetsindex efter</figcaption>
+                <br>
+                <a href="">
+                    <img src="{{ asset('img/scrutinizer_after.png') }}" alt="scrutinizer after" style="width: 400px;">
+                </a>
+            </figure>
+        </div>
     </div>
 
     <div>
