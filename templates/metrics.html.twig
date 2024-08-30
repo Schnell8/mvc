@@ -36,10 +36,10 @@
         <h2>Phpmetrics</h2>
         <p>Det första man lägger märke till är givetvis bilden med de röda cirklarna samt “Violations” som visar 8. Cirklarna relaterar till underhåll och komplexitet för koden. Storleken beror på hur komplex koden är och färgen avgör hur svår den är att underhålla. Stora röda cirklar vill man inte ha. Börjar vi i storleksordning innehåller cirkeln en “cyclomatic complexity” på 15 vilket är högt i jämförelse med de andra där 7 är näst i turordningen. Jag analyserar min GameController fil och minns tillbaka att jag inte var helt nöjd med utfallet. Tanken var att enbart själva spelflödet skulle befinna sig i filen men så blev inte fallet. Här finns metoder som skulle kunna ligga på andra ställen för att göra koden mindre komplex.</p>
         <figure>
-            <figcaption>Maintainability/Complexity</figcaption>
+            <figcaption>Maintainability/Complexity före</figcaption>
             <br>
             <a href="{{ asset('img/metrics_before.png') }}">
-                <img src="{{ asset('img/metrics_before.png') }}" alt="metrics before" style="width: 400px;" >
+                <img src="{{ asset('img/metrics_before.png') }}" alt="metrics before" style="width: 400px;">
             </a>
         </figure>
     </div>
@@ -52,7 +52,7 @@
             <figcaption>Kvalitetsindex före</figcaption>
             <br>
             <a href="https://scrutinizer-ci.com/g/Schnell8/mvc/?branch=main">
-                <img src="{{ asset('img/scrutinizer_before.png') }}" alt="metrics before">
+                <img src="{{ asset('img/scrutinizer_before.png') }}" alt="scrutinizer before">
             </a>
         </figure>
 
@@ -80,8 +80,42 @@
     </div>
 
     <div>
+        <h3>Analys efter implementering</h3>
+        <p>wdjiwdjwdi</p>
+        <figure>
+            <figcaption>Maintainability/Complexity före</figcaption>
+            <br>
+            <a href="{{ asset('img/metrics_before.png') }}">
+                <img src="{{ asset('img/metrics_before.png') }}" alt="metrics before" style="width: 400px;">
+            </a>
+        </figure>
+        <figure>
+            <figcaption>Maintainability/Complexity efter</figcaption>
+            <br>
+            <a href="{{ asset('img/metrics_after.png') }}">
+                <img src="{{ asset('img/metrics_after.png') }}" alt="metrics after" style="width: 400px;">
+            </a>
+        </figure>
+        <figure>
+            <figcaption>Kvalitetsindex före</figcaption>
+            <br>
+            <a href="https://scrutinizer-ci.com/g/Schnell8/mvc/?branch=main">
+                <img src="{{ asset('img/scrutinizer_before.png') }}" alt="scrutinizer before" style="width: 400px;">
+            </a>
+        </figure>
+        <figure>
+            <figcaption>Kvalitetsindex efter</figcaption>
+            <br>
+            <a href="">
+                <img src="{{ asset('img/scrutinizer_after.png') }}" alt="scrutinizer after" style="width: 400px;">
+            </a>
+        </figure>
+    </div>
+
+    <div>
         <h2>Diskussion</h2>
         <p>iopegfoire o oiejgri gr</p>
+
     </div>
 
 {% endblock %}
