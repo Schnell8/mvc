@@ -12,7 +12,7 @@ class Kernel extends BaseKernel
     // update to fix issue from scrutinizer
 
     /**
-     * @var array<string, string[]> 
+     * @var array<string, string[]>
      */
     protected $instanceof = [];
 

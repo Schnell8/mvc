@@ -166,6 +166,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-GameControllerTwig.html"
         },                {
+            "fqsen": "\\App\\Controller\\GameControllerTwig\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-GameControllerTwig.html#method___construct"
+        },                {
             "fqsen": "\\App\\Controller\\GameControllerTwig\u003A\u003Agame\u0028\u0029",
             "name": "game",
             "summary": "",
@@ -196,15 +201,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-GameControllerTwig.html#method_stay"
         },                {
-            "fqsen": "\\App\\Controller\\GameControllerTwig\u003A\u003AcalculateHandValue\u0028\u0029",
-            "name": "calculateHandValue",
-            "summary": "Calculate\u0020hand\u0020value",
-            "url": "classes/App-Controller-GameControllerTwig.html#method_calculateHandValue"
-        },                {
-            "fqsen": "\\App\\Controller\\GameControllerTwig\u003A\u003AdetermineWinner\u0028\u0029",
-            "name": "determineWinner",
+            "fqsen": "\\App\\Controller\\GameControllerTwig\u003A\u003A\u0024gameHelper",
+            "name": "gameHelper",
             "summary": "",
-            "url": "classes/App-Controller-GameControllerTwig.html#method_determineWinner"
+            "url": "classes/App-Controller-GameControllerTwig.html#property_gameHelper"
         },                {
             "fqsen": "\\App\\Controller\\LibraryController",
             "name": "LibraryController",
@@ -265,6 +265,11 @@ Search.appendIndex(
             "name": "about",
             "summary": "",
             "url": "classes/App-Controller-LuckyControllerTwig.html#method_about"
+        },                {
+            "fqsen": "\\App\\Controller\\LuckyControllerTwig\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
+            "summary": "",
+            "url": "classes/App-Controller-LuckyControllerTwig.html#method_metrics"
         },                {
             "fqsen": "\\App\\Controller\\LuckyControllerTwig\u003A\u003Areport\u0028\u0029",
             "name": "report",
@@ -606,10 +611,35 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Game-Player.html#property_hand"
         },                {
+            "fqsen": "\\App\\Help_Functions\\GameHelper",
+            "name": "GameHelper",
+            "summary": "",
+            "url": "classes/App-Help-Functions-GameHelper.html"
+        },                {
+            "fqsen": "\\App\\Help_Functions\\GameHelper\u003A\u003AcalculateHandValue\u0028\u0029",
+            "name": "calculateHandValue",
+            "summary": "Calculate\u0020hand\u0020value",
+            "url": "classes/App-Help-Functions-GameHelper.html#method_calculateHandValue"
+        },                {
+            "fqsen": "\\App\\Help_Functions\\GameHelper\u003A\u003AdetermineWinner\u0028\u0029",
+            "name": "determineWinner",
+            "summary": "Determine\u0020the\u0020winner\u0020based\u0020on\u0020hand\u0020values",
+            "url": "classes/App-Help-Functions-GameHelper.html#method_determineWinner"
+        },                {
             "fqsen": "\\App\\Kernel",
             "name": "Kernel",
             "summary": "",
             "url": "classes/App-Kernel.html"
+        },                {
+            "fqsen": "\\App\\Kernel\u003A\u003A\u0024instanceof",
+            "name": "instanceof",
+            "summary": "",
+            "url": "classes/App-Kernel.html#property_instanceof"
+        },                {
+            "fqsen": "\\App\\Kernel\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/App-Kernel.html#property_name"
         },                {
             "fqsen": "\\App\\Repository\\BookRepository",
             "name": "BookRepository",
@@ -620,11 +650,6 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/App-Repository-BookRepository.html#method___construct"
-        },                {
-            "fqsen": "\\App\\Repository\\BookRepository\u003A\u003AfindByIsbn\u0028\u0029",
-            "name": "findByIsbn",
-            "summary": "Find\u0020all\u0020producs\u0020having\u0020a\u0020value\u0020above\u0020the\u0020specified\u0020one.",
-            "url": "classes/App-Repository-BookRepository.html#method_findByIsbn"
         },                {
             "fqsen": "\\App\\Repository\\ProductRepository",
             "name": "ProductRepository",
@@ -670,6 +695,11 @@ Search.appendIndex(
             "name": "Game",
             "summary": "",
             "url": "namespaces/app-game.html"
+        },                {
+            "fqsen": "\\App\\Help_Functions",
+            "name": "Help_Functions",
+            "summary": "",
+            "url": "namespaces/app-help-functions.html"
         },                {
             "fqsen": "\\App",
             "name": "App",

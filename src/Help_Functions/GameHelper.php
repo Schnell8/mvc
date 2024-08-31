@@ -63,7 +63,7 @@ class GameHelper
         if ($bankHandValue > 21) {
             return "Player wins!";
         }
-    
+
         // jämför spelarhand mot bankhand
         return $playerHandValue > $bankHandValue ? "Player wins!"
             : ($playerHandValue < $bankHandValue ? "Bank wins!" : "It's a tie!");

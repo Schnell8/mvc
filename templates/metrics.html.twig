@@ -34,7 +34,13 @@
 
     <div>
         <h2>Phpmetrics</h2>
-        <p>Det första man lägger märke till är givetvis bilden med de röda cirklarna samt “Violations” som visar 8. Cirklarna relaterar till underhåll och komplexitet för koden. Storleken beror på hur komplex koden är och färgen avgör hur svår den är att underhålla. Stora röda cirklar vill man inte ha. Börjar vi i storleksordning innehåller cirkeln en “cyclomatic complexity” på 15 vilket är högt i jämförelse med de andra där 7 är näst i turordningen. Jag analyserar min GameController fil och minns tillbaka att jag inte var helt nöjd med utfallet. Tanken var att enbart själva spelflödet skulle befinna sig i filen men så blev inte fallet. Här finns metoder som skulle kunna ligga på andra ställen för att göra koden mindre komplex.</p>
+        <p>Det första man lägger märke till är givetvis bilden med de röda cirklarna samt “Violations” som visar 8.
+            Cirklarna relaterar till underhåll och komplexitet för koden. Storleken beror på hur komplex koden är och
+            färgen avgör hur svår den är att underhålla. Stora röda cirklar vill man inte ha. Börjar vi i storleksordning
+            innehåller cirkeln en “cyclomatic complexity” på 15 vilket är högt i jämförelse med de andra där 7 är näst i turordningen.
+            Jag analyserar min GameController fil och minns tillbaka att jag inte var helt nöjd med utfallet.
+            Tanken var att enbart själva spelflödet skulle befinna sig i filen men så blev inte fallet.
+            Här finns metoder som skulle kunna ligga på andra ställen för att göra koden mindre komplex.</p>
         <figure>
             <figcaption>Maintainability/Complexity före</figcaption>
             <br>
@@ -46,7 +52,10 @@
 
     <div>
         <h2>Scrutinizer</h2>
-        <p>Jag blir nästan i chock när jag ser resultatet 9.95 vilket jag inte förväntade mig. Build och code intelligence visar grönt. Coverage visar rött med endast 11% vilket behöver förbättras genom fler enhetstester. Jag noterar även 4 issues samt att min metod determineWinner sticker ut då den har betyg B till skillnad från övriga som har A. Den är full med conditions som jag troligtvis skulle kunna dra ner på.</p>
+        <p>Jag blir nästan i chock när jag ser resultatet 9.95 vilket jag inte förväntade mig.
+            Build och code intelligence visar grönt. Coverage visar rött med endast 11% vilket behöver förbättras genom fler enhetstester.
+            Jag noterar även fyra issues samt att min metod determineWinner sticker ut då den har betyg B till skillnad från övriga som har A.
+            Den är full med conditions som jag troligtvis skulle kunna dra ner på.</p>
 
         <figure>
             <figcaption>Kvalitetsindex före</figcaption>
@@ -73,15 +82,17 @@
 
     <div>
         <h2>Förbättringar</h2>
-        <p>Minska komplexiteten i GameController</p>
-        <p>Öka kodtäckning</p>
-        <p>Fixa issues/violations</p>
-        <p>För att minska komplexiteten behöver jag titta efter död köd, se över mina if-satser och se om jag kan separera komplexa metoder så att det blir lättare att förstå. Genom att lägga till fler enhetstester kommer kodtäckningen att öka. Slutligen ska jag se över mina issues/violations och förhoppningsvis kunna minska dessa genom små justeringar i koden.</p>
+        <p>- Minska komplexiteten i GameController</p>
+        <p>- Öka kodtäckning</p>
+        <p>- Fixa issues/violations</p>
+        <p>För att minska komplexiteten behöver jag titta efter död köd, se över mina if-satser och se om jag kan
+            separera komplexa metoder så att det blir lättare att förstå. 
+            Genom att lägga till fler enhetstester kommer kodtäckningen att öka. 
+            Slutligen ska jag se över mina issues/violations och förhoppningsvis kunna minska dessa genom små justeringar i koden.</p>
     </div>
 
     <div>
-        <h3>Analys efter implementering</h3>
-        <p>wdjiwdjwdi</p>
+        <h3>Implementering</h3>
         <div style="display: flex;">
             <figure>
                 <figcaption>Maintainability/Complexity före</figcaption>
@@ -114,11 +125,32 @@
                 </a>
             </figure>
         </div>
+        <h3>Analys</h3>
+        <p>Om vi börjar med phpmetrics så ser vi direkt att den stora röda cirkeln som representerade GameController har försvunnit.
+            Den illustreras istället av en betydligt mindre gul cirkel som visar på att komplexiteten minskat mycket och att värdet 
+            för underhåll ökat. Precis som vi ville. Där har också tillkommit en stor grön cirkel som utgör min GameHelper klass.
+            Genom denna uppdelning av kod har jag lyckats minska komplexiteten samtidigt som underhållet förenklats.
+            Kände mig inte specillt trygg i att åtgärda mina Violations men lyckades dra ner det från 8 till 7, alltid något.</p>
+        <p>Övergår vi till scrutinizer kan vi se på efter-bilden att mitt kvalitetsindex ökade från 9.95 till 10 och 
+            att coverage ökade från 11% till 15%. Att det blev 10 har att göra med att jag finslipade hjälpmetoden determineWinner
+            till att inte ha lika många if satser och istället uppgradera dem till det bättre.
+            Jag har kodtäckning för alla mina nödvändiga klasser som jag själv skapat dock ej i mina controllers.
+            För skojs skull prövade jag att exkludera dessa och då ökade coverage med 46 procentenheter upp till 61%
+            vilket är en betydligt högre och mer accepterad siffra. Tillsist tog jag itu med mina fyra issues och lyckades åtgärda två
+            av dem genom simpla åtgärder i koden.</p>
     </div>
 
     <div>
         <h2>Diskussion</h2>
-        <p>iopegfoire o oiejgri gr</p>
+        <p>Att jobba aktivt med kodkvalitet och “clean code” på detta sätt tror jag absolut att man kan göra och i mitt tycke även bör göra.
+            Just när mängden kod ökar, ökar även risken för fel och då är det lysande att nyttja dessa typer av verktyg som
+            sätter ramar för hur det ska se ut. Sitter du i större team med massor av utvecklare ser jag det som en stor fördel att
+            regelbundet under processen kunna se över koden och få det svart på vitt hur pass bra koden är.
+            Givetvis finns det också nackdelar med att ständigt sträva efter en hög kodkvalitet.
+            Det kan vara väldigt tidskrävande och agera bromskloss i utvecklingen av kod.
+            Utvecklare älskar att vara kreativa och det kommer alltid finnas sätt att optimera kod så kanske är det inte alltid
+            bra att ha strikta regler för vad som anses vara bra eller dålig kod.
+            </p>
 
     </div>
 

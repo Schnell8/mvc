@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1724919824">
-  <project timestamp="1724919824">
+<coverage generated="1725060965">
+  <project timestamp="1725060965">
     <file name="/home/schnell/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
@@ -628,17 +628,17 @@
       <line num="30" type="stmt" count="1"/>
       <line num="31" type="stmt" count="1"/>
       <line num="33" type="stmt" count="1"/>
-      <line num="37" type="stmt" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
       <line num="42" type="stmt" count="1"/>
-      <line num="43" type="stmt" count="1"/>
-      <line num="46" type="stmt" count="1"/>
-      <line num="56" type="method" name="determineWinner" visibility="public" complexity="6" crap="6.17" count="1"/>
+      <line num="45" type="stmt" count="1"/>
+      <line num="55" type="method" name="determineWinner" visibility="public" complexity="6" crap="6.17" count="1"/>
+      <line num="58" type="stmt" count="1"/>
       <line num="59" type="stmt" count="1"/>
-      <line num="60" type="stmt" count="1"/>
-      <line num="64" type="stmt" count="1"/>
-      <line num="65" type="stmt" count="0"/>
+      <line num="63" type="stmt" count="1"/>
+      <line num="64" type="stmt" count="0"/>
+      <line num="68" type="stmt" count="1"/>
       <line num="69" type="stmt" count="1"/>
-      <line num="70" type="stmt" count="1"/>
       <metrics loc="72" ncloc="48" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="23" elements="26" coveredelements="24"/>
     </file>
     <file name="/home/schnell/dbwebb-kurser/mvc/me/report/src/Kernel.php">
