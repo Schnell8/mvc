@@ -40,4 +40,5 @@ php -S localhost:8888 -t public
 ```
 
 5. Open browser
+
 Open up localhost:8888 in browser
