@@ -1,14 +1,14 @@
 <?php
 
-namespace App\proj;
+namespace App\Help_Functions;
 
-use App\Help_Functions\BlackjackHelper;
+//use App\Help_Functions\BlackjackHelper;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Test cases for class GameHelper
  */
-class HelpTest extends TestCase
+class BlackjackHelperTest extends TestCase
 {
     /**
      * Test if function returns correct value for dealer hand
