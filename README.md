@@ -19,25 +19,25 @@ Instruction for cloning and running app
 ----------------------------
 Run the following commands in termnial
 
-# Clone
-...
+1. Clone
+```
 git clone https://github.com/Schnell8/mvc.git
-...
+```
 
-# Composer install
-...
+2. Composer install
+```
 composer install
-...
+```
 
-# Npm install
-...
+3. Npm install
+```
 npm install
-...
+```
 
-# Run app
-...
+4. Run app
+```
 php -S localhost:8888 -t public
-...
+```
 
-# Open browser
+5. Open browser
 Open up localhost:8888 in browser
