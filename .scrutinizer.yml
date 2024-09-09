@@ -6,11 +6,7 @@ filter:
         vendor/*,
         test/*,
         /src/Card/*,
-        /src/Controller/ApiController,
-        /src/Controller/CardControllerTwig,
-        /src/Controller/LibraryControllerTwig,
-        /src/Controller/LuckyControllerTwig,
-        /src/Controller/ProductControllerTwig,
+        /src/Controller/*,
         /src/Entity/*,
         /src/Repository/*
     ]

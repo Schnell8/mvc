@@ -206,7 +206,6 @@ class ProjControllerTwig extends AbstractController
         // hämta deck, spelarhand inkl. värde + nuvarande hand index
         $deck = $session->get('deck');
         $playerHands = $session->get('playerHands');
-        $playerHandsValues = $session->get('playerHandsValues');
         $currentHandIndex = $session->get('currentHandIndex');
 
         // dra kort
