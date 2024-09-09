@@ -1,0 +1,62 @@
+{% extends "base_play.html.twig" %}
+
+{% block title %}Play{% endblock %}
+
+{% block main %}
+    <div class="gamefield">
+        <div class="gamefield-top">
+            <div class="dealer-img">
+                <img src="{{ asset('img/dealer.png') }}" alt="dealer" style="width: 150px;">
+            </div>
+            <div class="dealer-cards">
+                <img src="{{ asset('img/cards/' ~ dealerHand[0] ~ '.png') }}" alt="{{ dealerHand[0] }}" style="width: 80px; border-radius: 8px;">
+                <img src="{{ asset('img/card_back.png') }}" alt="card_back" style="width: 81px; border-radius: 8px;">
+            </div>
+        </div>
+
+        <div class="gamefield-middle">
+        {% for i in range(1, numberOfHands) %}
+            <div class="player-middle">
+                <div class="total">
+                    {% if playerHandsValues[i-1] > 21%}
+                        <h2>Bust</h2>
+                    {% else %}
+                        <h2>{{ playerHandsValues[i-1] }} </h2>
+                    {% endif %}
+                </div>
+                <div class="player-cards">
+                {% for card in playerHands[i-1] %}
+                    <img src="{{ asset('img/cards/' ~ card ~ '.png') }}" alt="{{ card }}" style="width: 80px; border-radius: 8px;">
+                {% endfor %}
+                </div>
+                <div class"bet">
+                    <h3>Bet: {{ bets[i-1] }}</h3>
+                </div>
+                {% if loop.index0 == currentHandIndex %}
+                <div class="draw-stop">
+                    <a href="{{ path('proj_draw') }}">
+                        <button class="btn-draw" type="submit">Draw</button>
+                    </a>
+                    <a href="{{ path('proj_stop') }}">
+                        <button class="btn-stop" type="submit">Stop</button>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+
+        <div class="gamefield-bottom">
+            <div class="player-img">
+                <figure>
+                    <img src="{{ asset('img/player.png') }}" alt="player" style="width: 150px;">
+                    <figcaption>{{ name }}</figcaption>
+                </figure>
+                <figure>
+                    <img src="{{ asset('img/money.png') }}" alt="money" style="width: 100px;">
+                    <figcaption>Balance: {{ balance }} uscados</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+{% endblock %}

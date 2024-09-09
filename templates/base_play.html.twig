@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Projekt{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/card-icon.png') }}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="proj-body">
+        <nav class="body-nav">
+            <ul>
+                <li><a href="{{ path('proj_reset') }}"><< Back to start</a></li>
+            </ul>
+        </nav>
+
+        <main class="proj-main">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="proj-footer">
+            {% block footer %}{% endblock %}
+            <div class="proj-footer-content">
+                <h3>Christopher Schnell</h3>
+                <p>Web Developer & Designer</p>
+                <ul class="contact-info">
+                    <li>firstname.lastname@email.com</li>
+                    <li>+123 456 789</li>
+                </ul>
+            </div>
+            <div class="proj-footer-bottom">
+                <p>&copy; 2024 Christopher | All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

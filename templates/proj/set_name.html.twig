@@ -1,0 +1,19 @@
+{% extends "base_play.html.twig" %}
+
+{% block title %}Setup{% endblock %}
+
+{% block main %}
+    <div class="setup">
+        <img src="{{ asset('img/player.png') }}" alt="player" style="width: 250px;">
+
+        <div class="setup-form-container">
+            <form action="{{ path('set_name_form') }}" method="POST">
+                <div class="setup-form-group">
+                    <label for="name">Enter name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <button class="btn-next" type="submit">Next >></button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

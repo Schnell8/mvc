@@ -1,11 +1,13 @@
 body {
     margin: 0 auto;
     background-color: lightgray;
-    max-width: 67rem;
 }
 
 main {
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 67rem;
 }
 
 .site-header {
@@ -229,7 +231,6 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    margin-top: 5rem;
 }
 
 footer p {
@@ -308,4 +309,425 @@ footer a:hover {
 }
 
 
+/* PROJEKT */
 
+.proj-body {
+    background-color: #000;
+}
+
+.proj-main {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.body-nav {
+    font-size: 3em;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+.body-nav a:hover {
+    background-color: #222;
+}
+
+.proj-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.header-h1 {
+    margin: auto;
+    color: #fff;
+    font-size: 4em;
+    font-family: sans-serif;
+}
+
+.header-nav {
+    background: transparent;
+}
+
+.clickable-card {
+    position: relative;
+    display: inline-block;
+    width: 200px;  /* Adjust width */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.clickable-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Style for the text */
+.overlay span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+/* Hover effect */
+.clickable-card:hover .overlay {
+    opacity: 1; /* Show the overlay */
+}
+
+.clickable-card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhance shadow */
+}
+
+/* About */
+.about_blackjack {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 25px 30px;
+    max-width: 67rem;
+    margin: 40px auto;
+    border-radius: 12px;
+}
+
+/* Huvudrubrik */
+.about_blackjack h1 {
+    color: #444;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #444;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Stycken */
+.about_blackjack p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Underh3-rubriker */
+.about_blackjack h3 {
+    color: #555;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Lista */
+.about_blackjack ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.about_blackjack ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+/* Footer for project */
+.proj-footer {
+    background-color: #000;
+    border-top: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+.proj-footer-content {
+    max-width: 67rem;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.proj-footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.proj-footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info li:hover {
+    cursor: pointer;
+    color: #1e90ff; /* Color change on hover */
+}
+
+.proj-footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.proj-footer-bottom p {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.proj-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.proj-footer a:hover {
+    color: #1e90ff;
+}
+
+.setup {
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(11, 111, 11);
+}
+
+.setup-form-container {
+    background-color: #f0f4f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Formulär rubrik */
+.setup-form-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Form Group */
+.setup-form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Etikett för textfält */
+.setup-form-group label {
+    font-size: 1em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Textfält */
+.setup-form-group input[type="text"], 
+.setup-form-group input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Textfält Fokus */
+.setup-form-group input[type="text"]:focus, 
+.setup-form-group input[type="number"]:focus {
+    border-color: #007bff;
+}
+
+.btn-next {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    display: inline-block;
+}
+
+/* Hover-effekt på knappen */
+.btn-next:hover {
+    background-color: #0056b3;
+}
+
+.dealer-div figcaption {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.current-uscados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.current-uscados p {
+    color: #fff;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+.gamefield {
+    background-color: rgb(11, 111, 11);
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.gamefield-top {
+    text-align: center;
+}
+
+.gamefield-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamefield-bottom {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.player-middle {
+    border: 2px solid yellow;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+    font-family: sans-serif;
+}
+
+.player-middle h2, h3 {
+    text-align: center;
+}
+
+.draw-stop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-stop {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80px;
+}
+
+/* Hover-effekt på knappen */
+.btn-stop:hover {
+    background-color: #E53935;
+}
+
+.btn-draw {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80px;
+}
+
+/* Hover-effekt på knappen */
+.btn-draw:hover {
+    background-color: #388E3C;
+}
+
+.player-img {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.dealer-img-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-newRound {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: 5px solid #000;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+}
+
+.btn-newRound:hover {
+    background-color: #0056b3;
+}
+
+.btn-end {
+    background-color: #FF0000;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border: 5px solid #000;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+}
+
+.btn-end:hover {
+    background-color: #E53935;
+}

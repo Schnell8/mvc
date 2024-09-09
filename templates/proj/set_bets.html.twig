@@ -1,0 +1,29 @@
+{% extends "base_play.html.twig" %}
+
+{% block title %}Set hands{% endblock %}
+
+{% block main %}
+<div class="setup">
+    <div class="dealer-div">
+        <figure>
+            <img src="{{ asset('img/dealer.png') }}" alt="dealer" style="width: 250px;">
+            <figcaption>- Please enter your bets</figcaption>
+        </figure>
+    </div>
+    <div class="setup-form-container">
+        <form action="{{ path('set_bets_form') }}" method="POST">
+        {% for i in range(1, numberOfHands) %}
+            <div class="setup-form-group">
+                <label for="bet{{ i }}">Hand {{ i }}</label>
+                <input type="number" id="bet{{ i }}" name="bet{{ i }}" min="50" max="{{ balance }}" step="50" required>
+            </div>
+        {% endfor %}
+            <button class="btn-next" type="submit">Play >></button>
+        </form>
+    </div>
+    <div class="current-uscados">
+        <img src="{{ asset('img/money.png') }}" alt="money" style="width: 100px;">
+        <p>Balance: {{ balance }} uscados</p>
+    </div>
+</div>
+{% endblock %}
