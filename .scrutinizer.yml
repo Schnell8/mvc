@@ -9,6 +9,7 @@ filter:
         /src/Controller/ApiController,
         /src/Controller/CardControllerTwig,
         /src/Controller/LibraryControllerTwig,
+        /src/Controller/LuckyControllerTwig,
         /src/Controller/ProductControllerTwig,
         /src/Entity/*,
         /src/Repository/*

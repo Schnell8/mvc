@@ -61,7 +61,6 @@ class HelpTest extends TestCase
 
         // kontrollera att värdena är lika
         $this->assertEquals($expectedPlayerHandsValues, $blackjackHelper->calculatePlayerHandsValues($playerHands));
-
     }
 
     /**
@@ -72,22 +71,90 @@ class HelpTest extends TestCase
         // skapa instans av BlackjackHelper klassen
         $blackjackHelper = new BlackjackHelper(); 
 
+        // 1 - båda under 21
         // resultat för spelare och dealer
-        $playerResults = [
+        $playerResults1 = [
             15,
             20,
             17
         ];
-        $dealerResult = 17;
+        $dealerResult1 = 17;
 
         // förväntade värden
-        $expectedResults = [
+        $expectedResults1 = [
             'Loss',
             'Win',
             'Loss'
         ];
 
         // kontrollera att värdena är lika
-        $this->assertEquals($expectedResults, $blackjackHelper->calculateResults($playerResults, $dealerResult));
+        $this->assertEquals($expectedResults1, $blackjackHelper->calculateResults($playerResults1, $dealerResult1));
+
+        // 2 - spelarhand över 21
+        // resultat för spelare och dealer
+        $playerResults2 = [
+            23,
+            20,
+            17
+        ];
+        $dealerResult2 = 20;
+
+        // förväntade värden
+        $expectedResults2 = [
+            'Loss',
+            'Loss',
+            'Loss'
+        ];
+
+        // kontrollera att värdena är lika
+        $this->assertEquals($expectedResults2, $blackjackHelper->calculateResults($playerResults2, $dealerResult2));
+
+        // 3 - dealerhand över 21
+        // resultat för spelare och dealer
+        $playerResults3 = [
+            22,
+            19,
+            15
+        ];
+        $dealerResult3 = 24;
+
+        // förväntade värden
+        $expectedResults3 = [
+            'Loss',
+            'Win',
+            'Win'
+        ];
+
+        // kontrollera att värdena är lika
+        $this->assertEquals($expectedResults3, $blackjackHelper->calculateResults($playerResults3, $dealerResult3));
+    }
+
+    /**
+     * Test if function returns correct value for player hands
+     */
+    public function testCalculateWinnings(): void
+    {
+        // skapa instans av BlackjackHelper klassen
+        $blackjackHelper = new BlackjackHelper(); 
+
+        // bestäm bets
+        $playerBets = [
+            200,
+            450,
+            100
+        ];
+
+        // bestäm results
+        $playerResults = [
+            'Loss',
+            'Win',
+            'Loss'
+        ];
+
+        // förväntade värde
+        $expectedPlayerWinnings = 900;
+
+        // kontrollera att värdena är lika
+        $this->assertEquals($expectedPlayerWinnings, $blackjackHelper->calculateWinnings($playerBets, $playerResults));
     }
 }

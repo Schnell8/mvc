@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1725889996">
-  <project timestamp="1725889996">
+<coverage generated="1725897704">
+  <project timestamp="1725897704">
     <file name="/home/schnell/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
@@ -770,7 +770,7 @@
     </file>
     <file name="/home/schnell/dbwebb-kurser/mvc/me/report/src/Help_Functions/BlackjackHelper.php">
       <class name="App\Help_Functions\BlackjackHelper" namespace="global">
-        <metrics complexity="22" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="51" elements="63" coveredelements="53"/>
+        <metrics complexity="22" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="59" elements="63" coveredelements="63"/>
       </class>
       <line num="13" type="method" name="calculateDealerHandValue" visibility="public" complexity="6" crap="6" count="1"/>
       <line num="15" type="stmt" count="1"/>
@@ -815,27 +815,27 @@
       <line num="88" type="stmt" count="1"/>
       <line num="92" type="stmt" count="1"/>
       <line num="95" type="stmt" count="1"/>
-      <line num="105" type="method" name="calculateResults" visibility="public" complexity="6" crap="6.17" count="1"/>
+      <line num="105" type="method" name="calculateResults" visibility="public" complexity="6" crap="6" count="1"/>
       <line num="108" type="stmt" count="1"/>
       <line num="111" type="stmt" count="1"/>
       <line num="114" type="stmt" count="1"/>
       <line num="115" type="stmt" count="1"/>
       <line num="118" type="stmt" count="1"/>
-      <line num="119" type="stmt" count="0"/>
+      <line num="119" type="stmt" count="1"/>
       <line num="123" type="stmt" count="1"/>
-      <line num="124" type="stmt" count="0"/>
+      <line num="124" type="stmt" count="1"/>
       <line num="128" type="stmt" count="1"/>
       <line num="129" type="stmt" count="1"/>
       <line num="134" type="stmt" count="1"/>
       <line num="138" type="stmt" count="1"/>
-      <line num="141" type="method" name="calculateWinnings" visibility="public" complexity="3" crap="12" count="0"/>
-      <line num="144" type="stmt" count="0"/>
-      <line num="147" type="stmt" count="0"/>
-      <line num="150" type="stmt" count="0"/>
-      <line num="153" type="stmt" count="0"/>
-      <line num="156" type="stmt" count="0"/>
-      <line num="160" type="stmt" count="0"/>
-      <metrics loc="163" ncloc="126" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="51" elements="63" coveredelements="53"/>
+      <line num="141" type="method" name="calculateWinnings" visibility="public" complexity="3" crap="3" count="1"/>
+      <line num="144" type="stmt" count="1"/>
+      <line num="147" type="stmt" count="1"/>
+      <line num="150" type="stmt" count="1"/>
+      <line num="153" type="stmt" count="1"/>
+      <line num="156" type="stmt" count="1"/>
+      <line num="160" type="stmt" count="1"/>
+      <metrics loc="163" ncloc="126" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="59" elements="63" coveredelements="63"/>
     </file>
     <file name="/home/schnell/dbwebb-kurser/mvc/me/report/src/Help_Functions/GameHelper.php">
       <class name="App\Help_Functions\GameHelper" namespace="global">
@@ -989,6 +989,6 @@
       <line num="62" type="stmt" count="0"/>
       <metrics loc="90" ncloc="46" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="17" coveredelements="0"/>
     </file>
-    <metrics files="28" loc="2559" ncloc="1964" classes="27" methods="129" coveredmethods="40" conditionals="0" coveredconditionals="0" statements="691" coveredstatements="148" elements="820" coveredelements="188"/>
+    <metrics files="28" loc="2559" ncloc="1964" classes="27" methods="129" coveredmethods="42" conditionals="0" coveredconditionals="0" statements="691" coveredstatements="156" elements="820" coveredelements="198"/>
   </project>
 </coverage>
