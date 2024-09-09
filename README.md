@@ -1,5 +1,5 @@
-mvc
-==================
+MVC
+====================
 
 Clickable badges linking to Scrutinizer report.
 
@@ -7,35 +7,35 @@ Clickable badges linking to Scrutinizer report.
 [![Code Coverage](https://scrutinizer-ci.com/g/Schnell8/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Schnell8/mvc/?branch=main)
 [![Build Status](https://scrutinizer-ci.com/g/Schnell8/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Schnell8/mvc/build-status/main)
 
-### Description
-
+Description
+----------------------------
 dwfeeeeeeeeeeeeeeeeeeeeef
 efefefe
 efefefef
 feefefe
 
-### Instruction for cloning and running app
-
-# Clone
+Instruction for cloning and running app
+----------------------------
 Run the following commands in termnial
+1.
 ...
 git clone https://github.com/Schnell8/mvc.git
 ...
 
-# Composer install
+2.
 ...
 composer install
 ...
 
-# Npm install
+3.
 ...
 npm install
 ...
 
-# Run app
+4.
 ...
 php -S localhost:8888 -t public
 ...
 
-# Open browser
+5.
 Open up localhost:8888 in browser
