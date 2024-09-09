@@ -39,6 +39,4 @@ npm install
 php -S localhost:8888 -t public
 ```
 
-5. Open browser
-
-Open up localhost:8888 in browser
+5. Open web browser and go to localhost:8888
