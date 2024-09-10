@@ -10,7 +10,7 @@ Clickable badges linking to Scrutinizer report.
 Description
 ----------------------------
 This is my repo for the course [mvc](https://dbwebb.se/kurser/mvc-v2). From the link you can read about what you'll learn in this course.
-For example object oriented programming in PHP, creating a web app using Symfony framework. In our latest assignment, the project, I get to show what I've learned from the course. I decided to implement a Blackjack game. Follow my instructions below and you can play too!
+For example object-oriented programming(OOP) in PHP, creating a web app using Symfony framework. In our latest assignment, the project, I get to show what I've learned from the course. I decided to implement a Blackjack game. Follow my instructions below and you can play too!
 
 
 Instruction for cloning and running app
