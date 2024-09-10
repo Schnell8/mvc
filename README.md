@@ -9,27 +9,25 @@ Clickable badges linking to Scrutinizer report.
 
 Description
 ----------------------------
-dwfeeeeeeeeeeeeeeeeeeeeefefefefeffepiflgoörjegnpthgojhrmtpöhmortlhäth,rtähhrthrtrthrthtrthhrthrt
+This is my repo for the course [mvc](https://dbwebb.se/kurser/mvc-v2). From the link you can read about what you'll learn in this course.
+For example object oriented programming in PHP, creating a web app using Symfony framework. In our latest assignment, the project, I get to show what I've learned from the course. I decided to implement a Blackjack game. Follow my instructions below and you can play too!
 
-efefefeffepiflgoörjegnpthgojhrmtpöhmortlhäth,rtähhrthrtrthrthtrthhrthrtefefefeffepiflgoörjegnpthgojhrmtpöhmortlhäth,rtähhrthrtrthrthtrthhrthrtefefefeffepiflgoörjegnpthgojhrmtpöhmortlhäth,rtähhrthrtrthrthtrthhrthrt
-
-efefefeffepiflgoörjegnpthgojhrmtpöhmortlhäth,rtähhrthrtrthrthtrthhrthrt
 
 Instruction for cloning and running app
 ----------------------------
 Run the following commands in termnial
 
-1. Clone
+1. Clone repo
 ```
 git clone https://github.com/Schnell8/mvc.git
 ```
 
-2. Composer install
+2. Install composer
 ```
 composer install
 ```
 
-3. Npm install
+3. Install npm
 ```
 npm install
 ```
