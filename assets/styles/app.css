@@ -419,7 +419,6 @@ footer a:hover {
     margin-bottom: 20px;
     border-bottom: 3px solid #444;
     padding-bottom: 10px;
-    text-align: center;
 }
 
 /* Stycken */
@@ -450,6 +449,10 @@ footer a:hover {
     margin-bottom: 10px;
     font-size: 1.1em;
     color: #333;
+}
+
+.about-proj h3, .rules-proj h3, .gameplay-proj h3, .profit-proj h3 {
+    text-align: start;
 }
 
 

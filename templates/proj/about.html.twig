@@ -4,36 +4,44 @@
 
 {% block main %}
     <div class="about_blackjack">
-        <h1>Om mitt projekt</h1>
-        <p>Detta är en fristående sida som skiljer sig från min report-sida.
-            Jag lagt extra krut på designen för att skapa känslan av att det är en egen webbplats.
-            Valet föll på att skapa ett Blackjack spel.
-            Det går till på så vis att spelaren skriver in sitt namn och blir tilldelad 1000 uscados (påhittad valuta).
-            Sen får spelaren välja mellan att spela 1, 2 eller 3 händer. Tillsist bestämmer spelaren hur mycket hen vill satsa per hand.
-            När valet är gjort är spelet igång.
-        </p>
+        <div class="about-proj">
+            <h1>Om mitt projekt</h1>
+            <p>Detta är en fristående sida som skiljer sig från min report-sida.
+                Jag lagt extra krut på designen för att skapa känslan av att det är en egen webbplats.
+                Valet föll på att skapa ett Blackjack spel.
+                Det går till på så vis att spelaren skriver in sitt namn och blir tilldelad 1000 uscados (påhittad valuta).
+                Sen får spelaren välja mellan att spela 1, 2 eller 3 händer. Tillsist bestämmer spelaren hur mycket hen vill satsa per hand.
+                När valet är gjort är spelet igång.
+            </p>
+        </div>
 
-        <h3>Spelregler</h3>
-        <ul>
-            <li>Det är spelaren mot banken</li>
-            <li>Målet är att få 21 eller komma så nära som möjligt genom att dra kort</li>
-            <li>Över 21 resulterar i förlust</li>
-            <li>Ess är värt 11 eller 1 beroende på resterande kort</li>
-            <li>Kung, dam, knekt är värda 10</li>
-            <li>Övriga kort är värda samma som dess siffra</li>
-        </ul>
+        <div class="rules-proj">
+            <h3>Spelregler</h3>
+            <ul>
+                <li>Det är spelaren mot banken</li>
+                <li>Målet är att få 21 eller komma så nära som möjligt genom att dra kort</li>
+                <li>Över 21 resulterar i förlust</li>
+                <li>Ess är värt 11 eller 1 beroende på resterande kort</li>
+                <li>Kung, dam, knekt är värda 10</li>
+                <li>Övriga kort är värda samma som dess siffra</li>
+            </ul>
+        </div>
 
-        <h3>Spelförlopp</h3>
-        <p>Inledningsvis får spelaren två kort per hand och därefter valet att dra ytterligare ett kort eller stanna.<br>
-            När spelaren är färdig är det bankens tur och så länge summan av bankens kort har ett värde under 17 måste banken dra kort.
-            Efter att banken gjort klart är rundan över och spelaren kan välja att påbörja en ny runda med resterande pengar eller avsluta spelet. 
-        </p>
+        <div class="gameplay-proj">
+            <h3>Spelförlopp</h3>
+            <p>Inledningsvis får spelaren två kort per hand och därefter valet att dra ytterligare ett kort eller stanna.<br>
+                När spelaren är färdig är det bankens tur och så länge summan av bankens kort har ett värde under 17 måste banken dra kort.
+                Efter att banken gjort klart är rundan över och spelaren kan välja att påbörja en ny runda med resterande pengar eller avsluta spelet. 
+            </p>
+        </div>
 
-        <h3>Vinstfördelning</h3>
-        <ul>
-            <li>Högst summa utan att överskrida 21 vinner</li>
-            <li>Vinsten är x2 insatsen</li>
-            <li>Banken vinner vid oavgjort</li>
-        </ul>
+        <div class="profit-proj">
+            <h3>Vinstfördelning</h3>
+            <ul>
+                <li>Högst summa utan att överskrida 21 vinner</li>
+                <li>Vinsten är x2 insatsen</li>
+                <li>Banken vinner vid oavgjort</li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
