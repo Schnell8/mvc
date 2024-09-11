@@ -5,7 +5,7 @@ namespace App\Help_Functions;
 class BlackjackHelper
 {
     /**
-     * Calculate hand value
+     * Calculate hand value for dealer
      *
      * @param string[] $hand Array of card strings
      * @return int The total value of the hand
@@ -46,6 +46,12 @@ class BlackjackHelper
         return $handValue;
     }
 
+    /**
+     * Calculate hand value for dealer
+     *
+     * @param array $hand Array of arrays holding card strings
+     * @return array array holding total value from each hand
+     */
     public function calculatePlayerHandsValues(array $hands): array
     {
         // variabel för att hålla värdet för handen
@@ -96,7 +102,7 @@ class BlackjackHelper
     }
 
     /**
-     * Determine winning hands between dealer and player
+     * Set results win/loss for player hands
      *
      * @param array $playerHandsValues spelarens värde för respektive hand
      * @param int $dealerHandValue dealerns värde för handen
@@ -138,6 +144,13 @@ class BlackjackHelper
         return $results;
     }
 
+    /**
+     * Calculate winnings
+     *
+     * @param array $bets spelarens insats för varje spelarhand
+     * @param array $results resultat för varje spealarhand
+     * @return int total vinst
+     */
     public function calculateWinnings(array $bets, array $results): int
     {
         // varibel för att hålla vinststumma

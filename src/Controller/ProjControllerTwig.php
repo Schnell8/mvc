@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Proj\Blackjack;
-use App\Proj\Deck;
 
 use App\Help_Functions\BlackjackHelper;
 
@@ -43,6 +42,9 @@ class ProjControllerTwig extends AbstractController
     #[Route("/proj/set_name_form", name: "set_name_form")]
     public function setNameForm(SessionInterface $session, Request $request): Response
     {
+        // töm session
+        $session->clear();
+
         // hämta namn + antal händer
         $name = $request->request->get('name');
 
